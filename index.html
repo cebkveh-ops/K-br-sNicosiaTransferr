@@ -17,7 +17,19 @@
     margin: 0;
     padding: 0;
 }
+<script>
+function setLanguage(lang) {
+  const translations = {
+    tr: "Türkçe",
+    en: "English",
+    he: "עברית",
+    ru: "Русский",
+    ar: "العربية"
+  };
 
+  alert("Seçilen dil: " + translations[lang]);
+}
+</script>
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #f5f8fc;
