@@ -1,431 +1,883 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kıbrıs Nicosia Transfer</title>
 
-  <title>Kıbrıs Nicosia Transfer | Ercan Airport Hotel Transfer 7/24</title>
+<meta name="description" content="Kıbrıs Nicosia Transfer - Güvenli, konforlu ve profesyonel transfer hizmeti.">
 
-  <meta name="description"
-    content="Kıbrıs Nicosia Transfer. Ercan Havalimanı, Larnaka Havalimanı ve Kıbrıs'ın tüm otellerine 7/24 özel transfer ve VIP transfer hizmeti. Lefkoşa, Girne, Gazimağusa, Bafra ve İskele transfer.">
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  <meta name="keywords"
-    content="Kıbrıs transfer, Kıbrıs Nicosia Transfer, Ercan transfer, Ercan Havalimanı transfer, Ercan otel transfer, Kıbrıs otel transfer, Lefkoşa transfer, Girne transfer, Gazimağusa transfer, Bafra transfer, İskele transfer, Larnaka transfer, Larnaka Havalimanı transfer, Kıbrıs VIP transfer, Cyprus transfer, Nicosia transfer, Ercan Airport Transfer, Cyprus Airport Transfer">
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f5f5f5;
+}
 
-  <meta name="robots" content="index, follow">
+header {
+  background: #111;
+  color: white;
+  padding: 18px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-  <meta property="og:title" content="Kıbrıs Nicosia Transfer">
-  <meta property="og:description" content="Kıbrıs'ın tüm otellerine 7/24 transfer hizmeti. Ercan ve Larnaka Havalimanı transferleri.">
-  <meta property="og:type" content="website">
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+.logo {
+  font-size: 23px;
+  font-weight: bold;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #eaf7ff, #ffffff);
-      color: #222;
-    }
+.language select {
+  padding: 9px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-    header {
-      background: linear-gradient(135deg, #0877b9, #00a6d6);
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
-    }
+.hero {
+  min-height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
 
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 30px;
-    }
+  background:
+    linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.58)),
+    url("https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1600&q=80")
+    center/cover;
+}
 
-    header p {
-      margin: 5px 0;
-      font-size: 17px;
-    }
+.hero-content {
+  max-width: 850px;
+}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
+.hero h1 {
+  font-size: clamp(35px, 6vw, 65px);
+  margin-bottom: 18px;
+}
 
-    .intro {
-      text-align: center;
-      margin-bottom: 25px;
-    }
+.hero p {
+  font-size: 20px;
+  margin-bottom: 28px;
+}
 
-    .intro h2 {
-      color: #0877b9;
-    }
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-    .regions {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 12px;
-      margin-bottom: 30px;
-    }
+.btn {
+  display: inline-block;
+  padding: 13px 22px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
 
-    .region {
-      border: none;
-      border-radius: 14px;
-      padding: 20px 10px;
-      background: white;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-      cursor: pointer;
-      font-size: 17px;
-      font-weight: bold;
-      color: #0877b9;
-      transition: 0.2s;
-    }
+.btn-primary {
+  background: #d4a017;
+  color: #111;
+}
 
-    .region:hover {
-      transform: translateY(-3px);
-      background: #0877b9;
-      color: white;
-    }
+.btn-whatsapp {
+  background: #25D366;
+  color: white;
+}
 
-    .booking {
-      background: white;
-      padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.13);
-      margin-bottom: 25px;
-    }
+section {
+  padding: 65px 20px;
+}
 
-    .booking h2 {
-      margin-top: 0;
-      color: #0877b9;
-      text-align: center;
-    }
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
 
-    label {
-      display: block;
-      margin-top: 13px;
-      margin-bottom: 6px;
-      font-weight: bold;
-    }
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    input, select, textarea {
-      width: 100%;
-      padding: 13px;
-      border: 1px solid #ccc;
-      border-radius: 9px;
-      font-size: 16px;
-    }
+.section-title h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
 
-    textarea {
-      min-height: 90px;
-      resize: vertical;
-    }
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
 
-    .submit {
-      width: 100%;
-      margin-top: 20px;
-      padding: 16px;
-      border: none;
-      border-radius: 10px;
-      background: #25D366;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+  text-align: center;
+}
 
-    .submit:hover {
-      background: #1ebe5d;
-    }
+.card .icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
 
-    .selected {
-      background: #eef9ff;
-      padding: 12px;
-      border-radius: 9px;
-      margin-bottom: 15px;
-      font-weight: bold;
-      color: #0877b9;
-      text-align: center;
-    }
+.card h3 {
+  margin-bottom: 10px;
+}
 
-    .services {
-      background: white;
-      border-radius: 18px;
-      padding: 25px;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.10);
-      margin-bottom: 25px;
-    }
+.booking {
+  background: #111;
+  color: white;
+}
 
-    .services h2 {
-      color: #0877b9;
-      text-align: center;
-    }
+form {
+  max-width: 750px;
+  margin: auto;
+  background: white;
+  color: #222;
+  padding: 30px;
+  border-radius: 12px;
+}
 
-    .services ul {
-      line-height: 2;
-      padding-left: 25px;
-    }
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
 
-    footer {
-      text-align: center;
-      background: #0877b9;
-      color: white;
-      padding: 25px 15px;
-    }
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
 
-    .whatsapp {
-      display: inline-block;
-      margin-top: 12px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-  </style>
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.submit {
+  width: 100%;
+  margin-top: 18px;
+  background: #25D366;
+  color: white;
+  font-size: 17px;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.contact-box {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,.07);
+}
+
+.contact-box a {
+  color: #111;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer {
+  background: #090909;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+@media (max-width: 650px) {
+
+  .nav {
+    flex-direction: column;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full {
+    grid-column: auto;
+  }
+
+  section {
+    padding: 45px 15px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>🚐 Kıbrıs Nicosia Transfer</h1>
-  <p>Ercan Havalimanı • Larnaka Havalimanı • Otel Transfer</p>
-  <p><strong>7/24 Kıbrıs'ın Tüm Otellerine Transfer Hizmeti</strong></p>
-</header>
+  <div class="nav">
 
-<div class="container">
-
-  <div class="intro">
-    <h2>Gideceğiniz Bölgeyi Seçin</h2>
-    <p>Gideceğiniz bölgenin üzerine tıklayarak rezervasyon oluşturun.</p>
-  </div>
-
-  <div class="regions">
-
-    <button class="region" onclick="selectRegion('Ercan Havalimanı')">
-      ✈️ Ercan Havalimanı
-    </button>
-
-    <button class="region" onclick="selectRegion('Larnaka Havalimanı')">
-      ✈️ Larnaka Havalimanı
-    </button>
-
-    <button class="region" onclick="selectRegion('Lefkoşa')">
-      📍 Lefkoşa
-    </button>
-
-    <button class="region" onclick="selectRegion('Girne')">
-      📍 Girne
-    </button>
-
-    <button class="region" onclick="selectRegion('Gazimağusa')">
-      📍 Gazimağusa
-    </button>
-
-    <button class="region" onclick="selectRegion('Bafra')">
-      📍 Bafra
-    </button>
-
-    <button class="region" onclick="selectRegion('İskele')">
-      📍 İskele
-    </button>
-
-    <button class="region" onclick="selectRegion('Diğer Bölge / Otel')">
-      🏨 Diğer Otel
-    </button>
-
-  </div>
-
-  <div class="booking" id="booking">
-
-    <h2>📝 Transfer Rezervasyonu</h2>
-
-    <div class="selected" id="selectedRegion">
-      Önce yukarıdan gideceğiniz bölgeyi seçin.
+    <div class="logo" data-i18n="logo">
+      Kıbrıs Nicosia Transfer
     </div>
 
-    <label>Ad Soyad</label>
-    <input id="name" type="text" placeholder="Adınız ve soyadınız">
+    <div class="language">
+      <select id="languageSelect" onchange="changeLanguage(this.value)">
+        <option value="tr">🇹🇷 Türkçe</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="de">🇩🇪 Deutsch</option>
+        <option value="ru">🇷🇺 Русский</option>
+        <option value="fr">🇫🇷 Français</option>
+        <option value="it">🇮🇹 Italiano</option>
+      </select>
+    </div>
 
-    <label>Telefon / WhatsApp</label>
-    <input id="phone" type="tel" placeholder="Telefon numaranız">
+  </div>
+</header>
 
-    <label>Yolcu Sayısı</label>
-    <input id="passengers" type="number" min="1" value="1">
+<section class="hero">
 
-    <label>Transfer Tarihi</label>
-    <input id="date" type="date">
+  <div class="hero-content">
 
-    <label>Transfer Saati</label>
-    <input id="time" type="time">
+    <h1 data-i18n="heroTitle">
+      Kıbrıs Nicosia Transfer
+    </h1>
 
-    <label>Alınacak Yer</label>
-    <input id="pickup" type="text"
-      placeholder="Örn: Ercan Havalimanı">
+    <p data-i18n="heroText">
+      Güvenli, konforlu ve zamanında özel transfer hizmeti.
+    </p>
 
-    <label>Gidilecek Otel / Bölge</label>
-    <input id="destination" type="text"
-      placeholder="Örn: Acapulco Hotel">
+    <div class="buttons">
 
-    <label>Uçuş Numarası</label>
-    <input id="flight" type="text"
-      placeholder="Varsa uçuş numaranız">
+      <a href="#booking"
+         class="btn btn-primary"
+         data-i18n="bookNow">
+        Rezervasyon Yap
+      </a>
 
-    <label>Ek Bilgi</label>
-    <textarea id="note"
-      placeholder="Eklemek istediğiniz bilgi"></textarea>
+      <a href="https://wa.me/905391046030"
+         class="btn btn-whatsapp"
+         target="_blank">
+        WhatsApp
+      </a>
 
-    <button class="submit" onclick="sendWhatsApp()">
-      📲 Rezervasyonu WhatsApp'tan Gönder
-    </button>
+    </div>
 
   </div>
 
-  <div class="services">
+</section>
 
-    <h2>🚐 Transfer Hizmetlerimiz</h2>
+<section>
 
-    <ul>
-      <li>✈️ Ercan Havalimanı Transfer</li>
-      <li>✈️ Larnaka Havalimanı Transfer</li>
-      <li>🏨 Kıbrıs Otel Transfer</li>
-      <li>🚐 Lefkoşa Transfer</li>
-      <li>🚐 Girne Transfer</li>
-      <li>🚐 Gazimağusa Transfer</li>
-      <li>🚐 Bafra Transfer</li>
-      <li>🚐 İskele Transfer</li>
-      <li>⭐ VIP Transfer</li>
-      <li>🕐 7/24 Transfer Hizmeti</li>
-    </ul>
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2 data-i18n="servicesTitle">
+        Hizmetlerimiz
+      </h2>
+
+      <p data-i18n="servicesText">
+        İhtiyacınıza uygun özel transfer seçenekleri.
+      </p>
+
+    </div>
+
+    <div class="services">
+
+      <div class="card">
+        <div class="icon">✈️</div>
+
+        <h3 data-i18n="airportTitle">
+          Havalimanı Transferi
+        </h3>
+
+        <p data-i18n="airportText">
+          Havalimanından istediğiniz noktaya konforlu özel transfer.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚕</div>
+
+        <h3 data-i18n="privateTitle">
+          Özel Transfer
+        </h3>
+
+        <p data-i18n="privateText">
+          Size özel araç ve profesyonel sürücü hizmeti.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏨</div>
+
+        <h3 data-i18n="hotelTitle">
+          Otel Transferi
+        </h3>
+
+        <p data-i18n="hotelText">
+          Otelinizden veya otelinize güvenli ulaşım.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚘</div>
+
+        <h3 data-i18n="cityTitle">
+          Şehirler Arası
+        </h3>
+
+        <p data-i18n="cityText">
+          Kıbrıs genelinde şehirler arası özel transfer.
+        </p>
+      </div>
+
+    </div>
 
   </div>
 
-</div>
+</section>
+
+<section id="booking" class="booking">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2 data-i18n="bookingTitle">
+        Transfer Rezervasyonu
+      </h2>
+
+      <p data-i18n="bookingText">
+        Bilgilerinizi doldurun, sizinle iletişime geçelim.
+      </p>
+
+    </div>
+
+    <form onsubmit="sendWhatsApp(event)">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label data-i18n="name">
+            Ad Soyad
+          </label>
+
+          <input id="name" type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="phone">
+            Telefon
+          </label>
+
+          <input id="phone" type="tel" required>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="date">
+            Tarih
+          </label>
+
+          <input id="date" type="date" required>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="time">
+            Saat
+          </label>
+
+          <input id="time" type="time" required>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="pickup">
+            Alınış Noktası
+          </label>
+
+          <input id="pickup" type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="dropoff">
+            Varış Noktası
+          </label>
+
+          <input id="dropoff" type="text" required>
+        </div>
+
+        <div class="form-group full">
+
+          <label data-i18n="passengers">
+            Yolcu Sayısı
+          </label>
+
+          <select id="passengers">
+
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6+">6+</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group full">
+
+          <label data-i18n="message">
+            Ek Bilgi
+          </label>
+
+          <textarea id="message"></textarea>
+
+        </div>
+
+      </div>
+
+      <button
+        class="btn submit"
+        type="submit"
+        data-i18n="sendBooking">
+
+        WhatsApp ile Rezervasyon Gönder
+
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2 data-i18n="contactTitle">
+        İletişim
+      </h2>
+
+    </div>
+
+    <div class="contact">
+
+      <div class="contact-box">
+
+        <div class="icon">📱</div>
+
+        <h3 data-i18n="phoneTitle">
+          Telefon
+        </h3>
+
+        <p>
+          <a href="tel:+905391046030">
+            +90 539 104 60 30
+          </a>
+        </p>
+
+      </div>
+
+      <div class="contact-box">
+
+        <div class="icon">💬</div>
+
+        <h3>
+          WhatsApp
+        </h3>
+
+        <p>
+          <a href="https://wa.me/905391046030"
+             target="_blank">
+            +90 539 104 60 30
+          </a>
+        </p>
+
+      </div>
+
+      <div class="contact-box">
+
+        <div class="icon">📍</div>
+
+        <h3 data-i18n="locationTitle">
+          Konum
+        </h3>
+
+        <p data-i18n="locationText">
+          Nicosia, Cyprus
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 <footer>
 
-  <strong>Kıbrıs Nicosia Transfer</strong>
+  <p>
 
-  <br>
+    © <span id="year"></span>
 
-  Ercan Airport • Larnaca Airport • Cyprus Hotel Transfer
+    <span data-i18n="logo">
+      Kıbrıs Nicosia Transfer
+    </span>
 
-  <br>
+    -
 
-  <a class="whatsapp"
-     href="https://wa.me/905391046030"
-     target="_blank">
-     💬 WhatsApp'tan Bize Ulaşın
-  </a>
+    <span data-i18n="rights">
+      Tüm hakları saklıdır.
+    </span>
+
+  </p>
 
 </footer>
 
-
 <script>
 
-  let selectedRegion = "";
+const translations = {
 
-  function selectRegion(region) {
+tr: {
+logo:"Kıbrıs Nicosia Transfer",
+heroTitle:"Kıbrıs Nicosia Transfer",
+heroText:"Güvenli, konforlu ve zamanında özel transfer hizmeti.",
+bookNow:"Rezervasyon Yap",
+servicesTitle:"Hizmetlerimiz",
+servicesText:"İhtiyacınıza uygun özel transfer seçenekleri.",
+airportTitle:"Havalimanı Transferi",
+airportText:"Havalimanından istediğiniz noktaya konforlu özel transfer.",
+privateTitle:"Özel Transfer",
+privateText:"Size özel araç ve profesyonel sürücü hizmeti.",
+hotelTitle:"Otel Transferi",
+hotelText:"Otelinizden veya otelinize güvenli ulaşım.",
+cityTitle:"Şehirler Arası",
+cityText:"Kıbrıs genelinde şehirler arası özel transfer.",
+bookingTitle:"Transfer Rezervasyonu",
+bookingText:"Bilgilerinizi doldurun, sizinle iletişime geçelim.",
+name:"Ad Soyad",
+phone:"Telefon",
+date:"Tarih",
+time:"Saat",
+pickup:"Alınış Noktası",
+dropoff:"Varış Noktası",
+passengers:"Yolcu Sayısı",
+message:"Ek Bilgi",
+sendBooking:"WhatsApp ile Rezervasyon Gönder",
+contactTitle:"İletişim",
+phoneTitle:"Telefon",
+locationTitle:"Konum",
+locationText:"Nicosia, Cyprus",
+rights:"Tüm hakları saklıdır.",
+whatsappMessage:"Merhaba, transfer rezervasyonu yapmak istiyorum."
+},
 
-    selectedRegion = region;
+en: {
+logo:"Cyprus Nicosia Transfer",
+heroTitle:"Cyprus Nicosia Transfer",
+heroText:"Safe, comfortable and on-time private transfer service.",
+bookNow:"Book Now",
+servicesTitle:"Our Services",
+servicesText:"Private transfer options tailored to your needs.",
+airportTitle:"Airport Transfer",
+airportText:"Comfortable private transfer from the airport to your destination.",
+privateTitle:"Private Transfer",
+privateText:"Private vehicle and professional driver service.",
+hotelTitle:"Hotel Transfer",
+hotelText:"Safe transportation to or from your hotel.",
+cityTitle:"Intercity Transfer",
+cityText:"Private transfers between cities across Cyprus.",
+bookingTitle:"Transfer Reservation",
+bookingText:"Fill in your details and we will contact you.",
+name:"Full Name",
+phone:"Phone",
+date:"Date",
+time:"Time",
+pickup:"Pickup Location",
+dropoff:"Drop-off Location",
+passengers:"Number of Passengers",
+message:"Additional Information",
+sendBooking:"Send Reservation via WhatsApp",
+contactTitle:"Contact",
+phoneTitle:"Phone",
+locationTitle:"Location",
+locationText:"Nicosia, Cyprus",
+rights:"All rights reserved.",
+whatsappMessage:"Hello, I would like to make a transfer reservation."
+},
 
-    document.getElementById("selectedRegion").innerHTML =
-      "📍 Seçilen Bölge: <strong>" + region + "</strong>";
+de: {
+logo:"Zypern Nicosia Transfer",
+heroTitle:"Zypern Nicosia Transfer",
+heroText:"Sicherer, komfortabler und pünktlicher privater Transferservice.",
+bookNow:"Jetzt buchen",
+servicesTitle:"Unsere Leistungen",
+servicesText:"Private Transferoptionen nach Ihren Bedürfnissen.",
+airportTitle:"Flughafentransfer",
+airportText:"Komfortabler Privattransfer vom Flughafen zu Ihrem Ziel.",
+privateTitle:"Privattransfer",
+privateText:"Privates Fahrzeug mit professionellem Fahrer.",
+hotelTitle:"Hoteltransfer",
+hotelText:"Sicherer Transport zu oder von Ihrem Hotel.",
+cityTitle:"Transfer zwischen Städten",
+cityText:"Private Transfers zwischen Städten auf Zypern.",
+bookingTitle:"Transferreservierung",
+bookingText:"Füllen Sie Ihre Daten aus und wir kontaktieren Sie.",
+name:"Vor- und Nachname",
+phone:"Telefon",
+date:"Datum",
+time:"Uhrzeit",
+pickup:"Abholort",
+dropoff:"Zielort",
+passengers:"Anzahl der Passagiere",
+message:"Zusätzliche Informationen",
+sendBooking:"Reservierung über WhatsApp senden",
+contactTitle:"Kontakt",
+phoneTitle:"Telefon",
+locationTitle:"Standort",
+locationText:"Nicosia, Zypern",
+rights:"Alle Rechte vorbehalten.",
+whatsappMessage:"Hallo, ich möchte einen Transfer reservieren."
+},
 
-    document.getElementById("destination").value = region;
+ru: {
+logo:"Трансфер Никосия, Кипр",
+heroTitle:"Трансфер Никосия, Кипр",
+heroText:"Безопасный, комфортный и своевременный частный трансфер.",
+bookNow:"Забронировать",
+servicesTitle:"Наши услуги",
+servicesText:"Индивидуальные варианты трансфера для ваших нужд.",
+airportTitle:"Трансфер из аэропорта",
+airportText:"Комфортный частный трансфер из аэропорта до места назначения.",
+privateTitle:"Частный трансфер",
+privateText:"Персональный автомобиль и профессиональный водитель.",
+hotelTitle:"Трансфер в отель",
+hotelText:"Безопасная поездка в отель или из отеля.",
+cityTitle:"Междугородний трансфер",
+cityText:"Частные трансферы между городами Кипра.",
+bookingTitle:"Бронирование трансфера",
+bookingText:"Заполните данные, и мы свяжемся с вами.",
+name:"Имя и фамилия",
+phone:"Телефон",
+date:"Дата",
+time:"Время",
+pickup:"Место отправления",
+dropoff:"Место назначения",
+passengers:"Количество пассажиров",
+message:"Дополнительная информация",
+sendBooking:"Отправить бронирование в WhatsApp",
+contactTitle:"Контакты",
+phoneTitle:"Телефон",
+locationTitle:"Местоположение",
+locationText:"Никосия, Кипр",
+rights:"Все права защищены.",
+whatsappMessage:"Здравствуйте, я хочу забронировать трансфер."
+},
 
-    document.getElementById("booking").scrollIntoView({
-      behavior: "smooth"
-    });
-  }
+fr: {
+logo:"Transfert Nicosie Chypre",
+heroTitle:"Transfert Nicosie Chypre",
+heroText:"Service de transfert privé sûr, confortable et ponctuel.",
+bookNow:"Réserver",
+servicesTitle:"Nos services",
+servicesText:"Des options de transfert privé adaptées à vos besoins.",
+airportTitle:"Transfert aéroport",
+airportText:"Transfert privé confortable de l'aéroport à votre destination.",
+privateTitle:"Transfert privé",
+privateText:"Véhicule privé avec chauffeur professionnel.",
+hotelTitle:"Transfert hôtel",
+hotelText:"Transport sûr vers ou depuis votre hôtel.",
+cityTitle:"Transfert interurbain",
+cityText:"Transferts privés entre les villes de Chypre.",
+bookingTitle:"Réservation de transfert",
+bookingText:"Remplissez vos informations et nous vous contacterons.",
+name:"Nom complet",
+phone:"Téléphone",
+date:"Date",
+time:"Heure",
+pickup:"Lieu de prise en charge",
+dropoff:"Destination",
+passengers:"Nombre de passagers",
+message:"Informations supplémentaires",
+sendBooking:"Envoyer la réservation par WhatsApp",
+contactTitle:"Contact",
+phoneTitle:"Téléphone",
+locationTitle:"Localisation",
+locationText:"Nicosie, Chypre",
+rights:"Tous droits réservés.",
+whatsappMessage:"Bonjour, je souhaite réserver un transfert."
+},
 
+it: {
+logo:"Trasferimento Nicosia Cipro",
+heroTitle:"Trasferimento Nicosia Cipro",
+heroText:"Servizio di trasferimento privato sicuro, confortevole e puntuale.",
+bookNow:"Prenota ora",
+servicesTitle:"I nostri servizi",
+servicesText:"Opzioni di trasferimento privato adatte alle tue esigenze.",
+airportTitle:"Trasferimento aeroportuale",
+airportText:"Trasferimento privato confortevole dall'aeroporto alla destinazione.",
+privateTitle:"Trasferimento privato",
+privateText:"Veicolo privato con autista professionale.",
+hotelTitle:"Trasferimento hotel",
+hotelText:"Trasporto sicuro da o verso il tuo hotel.",
+cityTitle:"Trasferimento interurbano",
+cityText:"Trasferimenti privati tra le città di Cipro.",
+bookingTitle:"Prenotazione trasferimento",
+bookingText:"Inserisci i tuoi dati e ti contatteremo.",
+name:"Nome e cognome",
+phone:"Telefono",
+date:"Data",
+time:"Ora",
+pickup:"Luogo di partenza",
+dropoff:"Destinazione",
+passengers:"Numero di passeggeri",
+message:"Informazioni aggiuntive",
+sendBooking:"Invia prenotazione tramite WhatsApp",
+contactTitle:"Contatti",
+phoneTitle:"Telefono",
+locationTitle:"Posizione",
+locationText:"Nicosia, Cipro",
+rights:"Tutti i diritti riservati.",
+whatsappMessage:"Salve, vorrei prenotare un trasferimento."
+}
 
-  function sendWhatsApp() {
+};
 
-    if (selectedRegion === "") {
-      alert("Lütfen önce gideceğiniz bölgeyi seçin.");
-      return;
+function changeLanguage(lang) {
+
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+
+    const key = element.getAttribute("data-i18n");
+
+    if (translations[lang] && translations[lang][key]) {
+      element.textContent = translations[lang][key];
     }
 
-    const name =
-      document.getElementById("name").value.trim();
+  });
 
-    const phone =
-      document.getElementById("phone").value.trim();
+  localStorage.setItem("selectedLanguage", lang);
+}
 
-    const passengers =
-      document.getElementById("passengers").value;
+function sendWhatsApp(event) {
 
-    const date =
-      document.getElementById("date").value;
+  event.preventDefault();
 
-    const time =
-      document.getElementById("time").value;
+  const whatsappNumber = "905391046030";
 
-    const pickup =
-      document.getElementById("pickup").value.trim();
+  const lang =
+    localStorage.getItem("selectedLanguage") || "tr";
 
-    const destination =
-      document.getElementById("destination").value.trim();
+  const t = translations[lang];
 
-    const flight =
-      document.getElementById("flight").value.trim();
+  const name =
+    document.getElementById("name").value;
 
-    const note =
-      document.getElementById("note").value.trim();
+  const phone =
+    document.getElementById("phone").value;
 
+  const date =
+    document.getElementById("date").value;
 
-    if (!name || !phone || !date || !time || !pickup || !destination) {
+  const time =
+    document.getElementById("time").value;
 
-      alert(
-        "Lütfen Ad Soyad, Telefon, Tarih, Saat, Alınacak Yer ve Gidilecek Otel/Bölge bilgilerini doldurun."
-      );
+  const pickup =
+    document.getElementById("pickup").value;
 
-      return;
-    }
+  const dropoff =
+    document.getElementById("dropoff").value;
 
+  const passengers =
+    document.getElementById("passengers").value;
 
-    const message =
-`🚐 YENİ TRANSFER REZERVASYONU
+  const message =
+    document.getElementById("message").value;
 
-👤 Ad Soyad: ${name}
+  const text =
+`${t.whatsappMessage}
 
-📞 Telefon: ${phone}
+${t.name}: ${name}
+${t.phone}: ${phone}
+${t.date}: ${date}
+${t.time}: ${time}
+${t.pickup}: ${pickup}
+${t.dropoff}: ${dropoff}
+${t.passengers}: ${passengers}
+${t.message}: ${message}`;
 
-👥 Yolcu Sayısı: ${passengers}
+  const url =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(text);
 
-📅 Tarih: ${date}
+  window.open(url, "_blank");
+}
 
-⏰ Saat: ${time}
+document.getElementById("year").textContent =
+new Date().getFullYear();
 
-📍 Alınacak Yer: ${pickup}
+const savedLanguage =
+localStorage.getItem("selectedLanguage") || "tr";
 
-🏨 Gidilecek Otel/Bölge: ${destination}
+document.getElementById("languageSelect").value =
+savedLanguage;
 
-📌 Seçilen Bölge: ${selectedRegion}
-
-✈️ Uçuş Numarası: ${flight || "Belirtilmedi"}
-
-📝 Ek Bilgi:
-${note || "Yok"}
-
-Kıbrıs Nicosia Transfer
-7/24 Transfer Hizmeti`;
-
-
-    const whatsappURL =
-      "https://wa.me/905391046030?text=" +
-      encodeURIComponent(message);
-
-
-    window.open(whatsappURL, "_blank");
-
-  }
+changeLanguage(savedLanguage);
 
 </script>
 
 </body>
-</html>
+  </html>
