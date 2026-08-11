@@ -669,6 +669,207 @@ selected.classList.add("active");
 }
 
 }
+<!-- ================= REZERVASYON SİSTEMİ ================= -->
 
+<button onclick="openReservation()" class="reservation-btn">
+  🚐 REZERVASYON YAP
+</button>
+
+<div id="reservationModal" class="reservation-modal">
+  <div class="reservation-box">
+
+    <button class="close-btn" onclick="closeReservation()">×</button>
+
+    <h2>Rezervasyon Yap</h2>
+
+    <form onsubmit="sendReservation(event)">
+
+      <input id="customerName"
+             type="text"
+             placeholder="Ad Soyad"
+             required>
+
+      <input id="customerPhone"
+             type="tel"
+             placeholder="Telefon"
+             required>
+
+      <input id="pickup"
+             type="text"
+             placeholder="Nereden?"
+             required>
+
+      <input id="destination"
+             type="text"
+             placeholder="Nereye?"
+             required>
+
+      <input id="reservationDate"
+             type="date"
+             required>
+
+      <input id="reservationTime"
+             type="time"
+             required>
+
+      <input id="guestCount"
+             type="number"
+             min="1"
+             placeholder="Kişi Sayısı"
+             required>
+
+      <textarea id="reservationNote"
+                placeholder="Ek not"></textarea>
+
+      <button type="submit" class="send-reservation">
+        REZERVASYON TALEBİ GÖNDER
+      </button>
+
+    </form>
+  </div>
+</div>
+
+<style>
+.reservation-btn {
+  background:#25D366;
+  color:white;
+  border:0;
+  padding:15px 28px;
+  border-radius:10px;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.reservation-modal {
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.75);
+  z-index:99999;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.reservation-box {
+  width:100%;
+  max-width:450px;
+  max-height:90vh;
+  overflow:auto;
+  background:white;
+  border-radius:18px;
+  padding:25px;
+  position:relative;
+}
+
+.reservation-box input,
+.reservation-box textarea {
+  width:100%;
+  box-sizing:border-box;
+  padding:13px;
+  margin-bottom:12px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  font-size:15px;
+}
+
+.reservation-box textarea {
+  min-height:80px;
+}
+
+.close-btn {
+  position:absolute;
+  right:12px;
+  top:8px;
+  border:0;
+  background:none;
+  font-size:30px;
+  cursor:pointer;
+}
+
+.send-reservation {
+  width:100%;
+  padding:15px;
+  border:0;
+  border-radius:9px;
+  background:#25D366;
+  color:white;
+  font-weight:bold;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+
+<script>
+function openReservation() {
+  document.getElementById("reservationModal").style.display = "flex";
+}
+
+function closeReservation() {
+  document.getElementById("reservationModal").style.display = "none";
+}
+
+function sendReservation(event) {
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("customerName").value;
+
+  const phone =
+    document.getElementById("customerPhone").value;
+
+  const pickup =
+    document.getElementById("pickup").value;
+
+  const destination =
+    document.getElementById("destination").value;
+
+  const date =
+    document.getElementById("reservationDate").value;
+
+  const time =
+    document.getElementById("reservationTime").value;
+
+  const guests =
+    document.getElementById("guestCount").value;
+
+  const note =
+    document.getElementById("reservationNote").value || "Yok";
+
+
+  const message =
+`🔔 YENİ REZERVASYON
+
+👤 ${name}
+📞 ${phone}
+
+📍 ${pickup}
+➡️ ${destination}
+
+📅 ${date}
+🕐 ${time}
+👥 ${guests} kişi
+
+📝 ${note}
+
+⏳ ONAY BEKLİYOR`;
+
+  const whatsappNumber = "905391046030";
+
+  const url =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+  window.open(url, "_blank");
+
+  closeReservation();
+}
+</script>
+
+<!-- ================= REZERVASYON SİSTEMİ SON ================= -->
 </script></body>
 </html>           
