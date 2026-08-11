@@ -18,13 +18,13 @@
     padding: 0;
 }
 <script>
-function setLanguage(lang) {
-  const translations = {
-    tr: "Türkçe",
-    en: "English",
-    he: "עברית",
-    ru: "Русский",
-    ar: "العربية"
+
+  
+    
+
+
+    
+
   };
 
   alert("Seçilen dil: " + translations[lang]);
@@ -36,7 +36,13 @@ body {
     color: #172033;
     line-height: 1.6;
 }
-<body>
+<body><div style="text-align:center; padding:10px;">
+  <button onclick="setLanguage('tr')">🇹🇷 Türkçe</button>
+  <button onclick="setLanguage('en')">🇬🇧 English</button>
+  <button onclick="setLanguage('he')">🇮🇱 עברית</button>
+  <button onclick="setLanguage('ru')">🇷🇺 Русский</button>
+  <button onclick="setLanguage('ar')">🇸🇦 العربية</button>
+</div>
 <div style="text-align:center; padding:10px;">
   <button onclick="setLanguage('tr')">🇹🇷 Türkçe</button>
   <button onclick="setLanguage('en')">🇬🇧 English</button>
