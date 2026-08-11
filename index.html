@@ -1,288 +1,50 @@
-<!DOCTYPE html><html lang="tr">
+<!DOCTYPE html>
+<html lang="tr">
+
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Kıbrıs Nicosia Transfer | Ercan Havalimanı Transfer | VIP Otel Transfer</title><meta name="description" content="Kıbrıs Nicosia Transfer ile Ercan ve Larnaca Havalimanı'ndan Lefkoşa, Girne, Gazimağusa, Bafra, İskele ve Kıbrıs genelindeki otellere 7/24 güvenilir VIP transfer hizmeti."><meta name="keywords" content="Kıbrıs transfer, Ercan transfer, Ercan Havalimanı transfer, Larnaca Havalimanı transfer, Kıbrıs otel transfer, Lefkoşa transfer, Girne transfer, Gazimağusa transfer, Bafra transfer, İskele transfer, VIP transfer"><meta name="author" content="Kıbrıs Nicosia Transfer">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kıbrıs Nicosia Transfer | Ercan Havalimanı Transfer | VIP Otel Transfer</title>
+
+<meta name="description" content="Kıbrıs Nicosia Transfer ile Ercan ve Larnaca Havalimanı'ndan Lefkoşa, Girne, Gazimağusa, Bafra, İskele ve Kıbrıs genelindeki otellere 7/24 güvenilir VIP transfer hizmeti.">
+
+<meta name="keywords" content="Kıbrıs transfer, Ercan transfer, Ercan Havalimanı transfer, Larnaca Havalimanı transfer, Kıbrıs otel transfer, Lefkoşa transfer, Girne transfer, Gazimağusa transfer, Bafra transfer, İskele transfer, VIP transfer">
+
+<meta name="author" content="Kıbrıs Nicosia Transfer">
 <meta name="robots" content="index, follow">
-<meta name="googlebot" content="index, follow"><link rel="canonical" href="https://cebkveh-ops.github.io/KibrisNicosiaTransferr/"><meta property="og:title" content="Kıbrıs Nicosia Transfer | Ercan Havalimanı Transfer">
-<meta property="og:description" content="Ercan ve Larnaca Havalimanı'ndan Kıbrıs genelindeki otellere 7/24 güvenilir VIP transfer.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://cebkveh-ops.github.io/KibrisNicosiaTransferr/"><style>
+
+<link rel="canonical" href="https://cebkveh-ops.github.io/KibrisNicosiaTransferr/">
+
+<style>
 
 *{
 box-sizing:border-box;
 margin:0;
-padding:0
-}
-<!-- ============================= -->
-<!-- REZERVASYON SİSTEMİ -->
-<!-- ============================= -->
-
-<button onclick="openReservation()" class="reservation-btn">
-  Rezervasyon Yap
-</button>
-
-<div id="reservationModal" class="reservation-modal">
-  <div class="reservation-box">
-
-    <button class="close-btn" onclick="closeReservation()">×</button>
-
-    <h2>Rezervasyon Yap</h2>
-    <p>Bilgilerinizi doldurun.</p>
-
-    <form onsubmit="sendReservation(event)">
-
-      <input
-        type="text"
-        id="customerName"
-        placeholder="Ad Soyad"
-        required
-      >
-
-      <input
-        type="tel"
-        id="customerPhone"
-        placeholder="Telefon"
-        required
-      >
-
-      <input
-        type="text"
-        id="pickup"
-        placeholder="Nereden alınacak?"
-        required
-      >
-
-      <input
-        type="text"
-        id="destination"
-        placeholder="Nereye gidilecek?"
-        required
-      >
-
-      <input
-        type="date"
-        id="reservationDate"
-        required
-      >
-
-      <input
-        type="time"
-        id="reservationTime"
-        required
-      >
-
-      <input
-        type="number"
-        id="guestCount"
-        placeholder="Kişi Sayısı"
-        min="1"
-        required
-      >
-
-      <textarea
-        id="reservationNote"
-        placeholder="Ek not (isteğe bağlı)"
-      ></textarea>
-
-      <button type="submit" class="send-reservation">
-        REZERVASYON GÖNDER
-      </button>
-
-    </form>
-  </div>
-</div>
-
-
-<style>
-.reservation-btn {
-  background: #25D366;
-  color: #fff;
-  border: 0;
-  padding: 15px 28px;
-  border-radius: 10px;
-  font-size: 17px;
-  font-weight: 700;
-  cursor: pointer;
+padding:0;
 }
 
-.reservation-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.72);
-  z-index: 99999;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.reservation-box {
-  width: 100%;
-  max-width: 450px;
-  max-height: 90vh;
-  overflow-y: auto;
-  background: #fff;
-  border-radius: 18px;
-  padding: 25px;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.reservation-box h2 {
-  margin: 0 0 8px;
-}
-
-.reservation-box p {
-  margin-bottom: 20px;
-  color: #666;
-}
-
-.reservation-box input,
-.reservation-box textarea {
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 12px;
-  padding: 13px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 15px;
-}
-
-.reservation-box textarea {
-  min-height: 80px;
-  resize: vertical;
-}
-
-.close-btn {
-  position: absolute;
-  right: 14px;
-  top: 8px;
-  border: 0;
-  background: transparent;
-  font-size: 30px;
-  cursor: pointer;
-  color: #333;
-}
-
-.send-reservation {
-  width: 100%;
-  padding: 15px;
-  border: 0;
-  border-radius: 9px;
-  background: #25D366;
-  color: #fff;
-  font-weight: 700;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.send-reservation:hover,
-.reservation-btn:hover {
-  opacity: .9;
-}
-</style>
-
-
-<script>
-function openReservation() {
-  document.getElementById("reservationModal").style.display = "flex";
-}
-
-function closeReservation() {
-  document.getElementById("reservationModal").style.display = "none";
-}
-
-function sendReservation(event) {
-  event.preventDefault();
-
-  const name =
-    document.getElementById("customerName").value.trim();
-
-  const phone =
-    document.getElementById("customerPhone").value.trim();
-
-  const pickup =
-    document.getElementById("pickup").value.trim();
-
-  const destination =
-    document.getElementById("destination").value.trim();
-
-  const date =
-    document.getElementById("reservationDate").value;
-
-  const time =
-    document.getElementById("reservationTime").value;
-
-  const guests =
-    document.getElementById("guestCount").value;
-
-  const note =
-    document.getElementById("reservationNote").value.trim();
-
-
-  const message =
-`🔔 YENİ REZERVASYON TALEBİ
-
-👤 Ad Soyad: ${name}
-📞 Telefon: ${phone}
-
-📍 Nereden:
-${pickup}
-
-📍 Nereye:
-${destination}
-
-📅 Tarih: ${date}
-🕐 Saat: ${time}
-👥 Kişi Sayısı: ${guests}
-
-📝 Not:
-${note || "Yok"}
-
-⏳ DURUM: ONAY BEKLİYOR`;
-
-
-  /* SENİN WHATSAPP NUMARAN */
-  const whatsappNumber = "905391046030";
-
-
-  const whatsappURL =
-    "https://wa.me/" +
-    whatsappNumber +
-    "?text=" +
-    encodeURIComponent(message);
-
-
-  window.open(whatsappURL, "_blank");
-
-  closeReservation();
-}
-</script>
-
-<!-- ============================= -->
-<!-- REZERVASYON SİSTEMİ BİTİŞ -->
-<!-- ============================= -->
 body{
 font-family:Arial,sans-serif;
 background:#f5f7fa;
 color:#222;
-line-height:1.6
+line-height:1.6;
 }
 
 header{
 background:linear-gradient(135deg,#075e54,#18a77d);
 color:white;
 text-align:center;
-padding:42px 20px
+padding:42px 20px;
 }
 
 header h1{
 font-size:38px;
-margin-bottom:10px
+margin-bottom:10px;
 }
 
 header p{
-font-size:19px
+font-size:19px;
 }
 
 nav{
@@ -291,20 +53,20 @@ text-align:center;
 padding:14px 8px;
 position:sticky;
 top:0;
-z-index:1000
+z-index:1000;
 }
 
 nav a{
 color:white;
 text-decoration:none;
 margin:0 9px;
-font-weight:bold
+font-weight:bold;
 }
 
 section{
 max-width:1100px;
 margin:auto;
-padding:55px 20px
+padding:55px 20px;
 }
 
 .hero{
@@ -319,21 +81,21 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-color:white
+color:white;
 }
 
 .hero-content{
-max-width:850px
+max-width:850px;
 }
 
 .hero h2{
 font-size:44px;
-margin-bottom:18px
+margin-bottom:18px;
 }
 
 .hero p{
 font-size:21px;
-margin-bottom:25px
+margin-bottom:25px;
 }
 
 .button{
@@ -345,32 +107,32 @@ color:white;
 text-decoration:none;
 font-weight:bold;
 font-size:17px;
-background:#25d366
+background:#25d366;
 }
 
 .button.call{
-background:#075e54
+background:#075e54;
 }
 
 h2{
 text-align:center;
 color:#075e54;
 margin-bottom:30px;
-font-size:32px
+font-size:32px;
 }
 
 .intro{
 max-width:850px;
 margin:auto;
 text-align:center;
-font-size:18px
+font-size:18px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 gap:20px;
-margin-top:30px
+margin-top:30px;
 }
 
 .card{
@@ -378,17 +140,17 @@ background:white;
 padding:25px;
 border-radius:12px;
 box-shadow:0 4px 15px rgba(0,0,0,.08);
-text-align:center
+text-align:center;
 }
 
 .card h3{
 color:#075e54;
-margin-bottom:10px
+margin-bottom:10px;
 }
 
 .gallery{
 max-width:none;
-background:#eaf5f1
+background:#eaf5f1;
 }
 
 .gallery-grid{
@@ -396,50 +158,50 @@ max-width:1100px;
 margin:auto;
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:18px
+gap:18px;
 }
 
 .gallery-item{
 background:white;
 border-radius:12px;
 overflow:hidden;
-box-shadow:0 4px 12px rgba(0,0,0,.12)
+box-shadow:0 4px 12px rgba(0,0,0,.12);
 }
 
 .gallery-item img{
 width:100%;
 height:240px;
 object-fit:cover;
-display:block
+display:block;
 }
 
 .gallery-item p{
 padding:10px;
 text-align:center;
 font-weight:bold;
-color:#075e54
+color:#075e54;
 }
 
 .locations{
-background:white
+background:white;
 }
 
 .location-list{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:12px
+gap:12px;
 }
 
 .location{
 background:#eaf5f1;
 padding:12px 20px;
 border-radius:25px;
-font-weight:bold
+font-weight:bold;
 }
 
 .languages{
-text-align:center
+text-align:center;
 }
 
 .language-buttons button{
@@ -450,7 +212,7 @@ padding:10px 15px;
 margin:5px;
 border-radius:6px;
 cursor:pointer;
-font-weight:bold
+font-weight:bold;
 }
 
 .language-content{
@@ -460,87 +222,212 @@ margin:25px auto 0;
 background:white;
 padding:25px;
 border-radius:12px;
-text-align:center
+text-align:center;
 }
 
 .language-content.active{
-display:block
+display:block;
 }
 
 .contact{
 max-width:none;
 background:#075e54;
 color:white;
-text-align:center
+text-align:center;
 }
 
 .contact h2{
-color:white
+color:white;
 }
 
 .contact p{
-font-size:19px
+font-size:19px;
 }
 
 footer{
 background:#063f37;
 color:white;
 text-align:center;
-padding:25px
+padding:25px;
 }
+
+
+/* =========================
+   REZERVASYON SİSTEMİ
+   ========================= */
+
+.reservation-btn{
+display:inline-block;
+margin:8px;
+background:#25D366;
+color:white;
+border:0;
+padding:14px 24px;
+border-radius:8px;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.reservation-modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.75);
+z-index:99999;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.reservation-box{
+width:100%;
+max-width:450px;
+max-height:90vh;
+overflow-y:auto;
+background:white;
+border-radius:18px;
+padding:25px;
+position:relative;
+}
+
+.reservation-box h2{
+margin-bottom:8px;
+}
+
+.reservation-box p{
+text-align:center;
+color:#666;
+margin-bottom:20px;
+}
+
+.reservation-box input,
+.reservation-box textarea{
+width:100%;
+padding:13px;
+margin-bottom:12px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:15px;
+font-family:Arial,sans-serif;
+}
+
+.reservation-box textarea{
+min-height:80px;
+resize:vertical;
+}
+
+.close-btn{
+position:absolute;
+right:12px;
+top:8px;
+border:0;
+background:none;
+font-size:30px;
+cursor:pointer;
+color:#333;
+}
+
+.send-reservation{
+width:100%;
+padding:15px;
+border:0;
+border-radius:9px;
+background:#25D366;
+color:white;
+font-weight:bold;
+font-size:16px;
+cursor:pointer;
+}
+
+.send-reservation:hover,
+.reservation-btn:hover{
+opacity:.9;
+}
+
+
+/* =========================
+   MOBİL
+   ========================= */
 
 @media(max-width:700px){
 
 header h1{
-font-size:29px
+font-size:29px;
 }
 
 .hero{
-min-height:430px
+min-height:430px;
 }
 
 .hero h2{
-font-size:31px
+font-size:31px;
 }
 
 .hero p{
-font-size:18px
+font-size:18px;
 }
 
 nav a{
 display:inline-block;
 font-size:14px;
-margin:5px
+margin:5px;
 }
 
 .gallery-grid{
-grid-template-columns:1fr
+grid-template-columns:1fr;
 }
 
 .gallery-item img{
-height:260px
+height:260px;
 }
 
 }
 
-</style></head><body><header>
+</style>
+</head>
+
+
+<body>
+
+
+<header>
 <h1>Kıbrıs Nicosia Transfer</h1>
-<p>Ercan Havalimanı • Larnaca Havalimanı • Otel Transferleri • VIP Transfer</p>
-</header><nav>
+
+<p>
+Ercan Havalimanı • Larnaca Havalimanı •
+Otel Transferleri • VIP Transfer
+</p>
+</header>
+
+
+<nav>
 <a href="#anasayfa">Ana Sayfa</a>
 <a href="#hizmetler">Hizmetler</a>
 <a href="#galeri">Fotoğraflar</a>
 <a href="#bolgeler">Bölgeler</a>
 <a href="#diller">Diller</a>
 <a href="#iletisim">İletişim</a>
-</nav><section class="hero" id="anasayfa"><div class="hero-content"><h2>Kıbrıs Ercan Havalimanı Transfer</h2><p>
+</nav>
+
+
+<section class="hero" id="anasayfa">
+
+<div class="hero-content">
+
+<h2>Kıbrıs Ercan Havalimanı Transfer</h2>
+
+<p>
 Ercan ve Larnaca Havalimanlarından Lefkoşa,
-Girne, Gazimağusa, Bafra, İskele ve Kıbrıs genelindeki
-otellere 7/24 güvenilir ve konforlu transfer hizmeti.
-</p><a class="button"
+Girne, Gazimağusa, Bafra, İskele ve Kıbrıs
+genelindeki otellere 7/24 güvenilir ve
+konforlu transfer hizmeti.
+</p>
+
+<a class="button"
 href="https://wa.me/905391046030"
 target="_blank">
-WhatsApp'tan Rezervasyon
+WhatsApp'tan Yaz
 </a>
 
 <a class="button call"
@@ -548,56 +435,144 @@ href="tel:+905391046030">
 Hemen Ara
 </a>
 
-</div></section><section id="hizmetler"><h2>Kıbrıs Transfer Hizmetlerimiz</h2><p class="intro">
-Kıbrıs Nicosia Transfer olarak Ercan Havalimanı ve
-Larnaca Havalimanı ile Kıbrıs genelindeki oteller arasında
-7/24 güvenilir, konforlu ve profesyonel transfer hizmeti sunuyoruz.
-</p><div class="cards"><div class="card">
+<br>
+
+<button onclick="openReservation()" class="reservation-btn">
+🚐 REZERVASYON YAP
+</button>
+
+</div>
+</section>
+
+
+<section id="hizmetler">
+
+<h2>Kıbrıs Transfer Hizmetlerimiz</h2>
+
+<p class="intro">
+Kıbrıs Nicosia Transfer olarak Ercan Havalimanı
+ve Larnaca Havalimanı ile Kıbrıs genelindeki
+oteller arasında 7/24 güvenilir, konforlu ve
+profesyonel transfer hizmeti sunuyoruz.
+</p>
+
+
+<div class="cards">
+
+<div class="card">
 <h3>✈️ Ercan Havalimanı Transfer</h3>
-<p>Ercan Havalimanı'ndan Kıbrıs'ın tüm önemli bölgelerine ve otellerine transfer.</p>
-</div><div class="card">
+<p>
+Ercan Havalimanı'ndan Kıbrıs'ın tüm önemli
+bölgelerine ve otellerine transfer.
+</p>
+</div>
+
+<div class="card">
 <h3>✈️ Larnaca Havalimanı Transfer</h3>
-<p>Larnaca Havalimanı ile Kuzey Kıbrıs arasındaki transfer hizmetleri.</p>
-</div><div class="card">
+<p>
+Larnaca Havalimanı ile Kuzey Kıbrıs
+arasındaki transfer hizmetleri.
+</p>
+</div>
+
+<div class="card">
 <h3>🏨 Kıbrıs Otel Transfer</h3>
-<p>Kıbrıs genelindeki otellere ve otellerden havalimanlarına transfer.</p>
-</div><div class="card">
+<p>
+Kıbrıs genelindeki otellere ve otellerden
+havalimanlarına transfer.
+</p>
+</div>
+
+<div class="card">
 <h3>🚐 VIP Transfer</h3>
-<p>Özel araçlarla konforlu ve güvenilir VIP transfer hizmeti.</p>
-</div><div class="card">
+<p>
+Özel araçlarla konforlu ve güvenilir
+VIP transfer hizmeti.
+</p>
+</div>
+
+<div class="card">
 <h3>🕐 7/24 Transfer</h3>
-<p>Günün her saati rezervasyon ve transfer hizmeti.</p>
-</div><div class="card">
+<p>
+Günün her saati rezervasyon ve
+transfer hizmeti.
+</p>
+</div>
+
+<div class="card">
 <h3>👨‍👩‍👧‍👦 Özel Transfer</h3>
-<p>Aileler, çiftler, arkadaş grupları ve özel misafirler için transfer.</p>
-</div></div></section><section class="gallery" id="galeri"><h2>📸 Kıbrıs Nicosia Transfer Fotoğrafları</h2><div class="gallery-grid"><div class="gallery-item">
+<p>
+Aileler, çiftler, arkadaş grupları ve
+özel misafirler için transfer.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="gallery" id="galeri">
+
+<h2>📸 Kıbrıs Nicosia Transfer Fotoğrafları</h2>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
 <img src="FB_IMG_1786408276786.jpg" alt="Kıbrıs Nicosia Transfer">
 <p>Kıbrıs Nicosia Transfer</p>
-</div><div class="gallery-item">
+</div>
+
+<div class="gallery-item">
 <img src="FB_IMG_1786408272702.jpg" alt="Ercan Havalimanı Transfer">
 <p>Ercan Havalimanı Transfer</p>
-</div><div class="gallery-item">
+</div>
+
+<div class="gallery-item">
 <img src="FB_IMG_1786408282209.jpg" alt="Kıbrıs VIP Transfer">
 <p>VIP Transfer</p>
-</div><div class="gallery-item">
+</div>
+
+<div class="gallery-item">
 <img src="FB_IMG_1786408284973.jpg" alt="Kıbrıs Otel Transfer">
 <p>Otel Transferi</p>
-</div><div class="gallery-item">
+</div>
+
+<div class="gallery-item">
 <img src="FB_IMG_1786408291871.jpg" alt="Larnaca Havalimanı Transfer">
 <p>Larnaca Transfer</p>
-</div><div class="gallery-item">
+</div>
+
+<div class="gallery-item">
 <img src="FB_IMG_1786408296098.jpg" alt="Kıbrıs Özel Transfer">
 <p>Özel Transfer</p>
-</div><div class="gallery-item">
+</div>
+
+<div class="gallery-item">
 <img src="FB_IMG_1786408303504.jpg" alt="Kuzey Kıbrıs Transfer">
 <p>Kuzey Kıbrıs Transfer</p>
-</div><div class="gallery-item">
+</div>
+
+<div class="gallery-item">
 <img src="FB_IMG_1786408307087.jpg" alt="Kıbrıs Havalimanı Otel Transfer">
 <p>Havalimanı ve Otel Transfer</p>
-</div><div class="gallery-item">
+</div>
+
+<div class="gallery-item">
 <img src="FB_IMG_1786408312833.jpg" alt="Kıbrıs 7/24 Transfer">
 <p>7/24 Transfer Hizmeti</p>
-</div></div></section><section class="locations" id="bolgeler"><h2>Kıbrıs Hizmet Bölgelerimiz</h2><div class="location-list"><div class="location">Ercan Havalimanı</div>
+</div>
+
+</div>
+</section>
+
+
+<section class="locations" id="bolgeler">
+
+<h2>Kıbrıs Hizmet Bölgelerimiz</h2>
+
+<div class="location-list">
+
+<div class="location">Ercan Havalimanı</div>
 <div class="location">Larnaca Havalimanı</div>
 <div class="location">Lefkoşa</div>
 <div class="location">Girne</div>
@@ -606,40 +581,131 @@ Larnaca Havalimanı ile Kıbrıs genelindeki oteller arasında
 <div class="location">Bafra</div>
 <div class="location">Lapta</div>
 <div class="location">Alsancak</div>
-<div class="location">Karpaz</div></div></section><section><h2>Neden Kıbrıs Nicosia Transfer?</h2><div class="cards"><div class="card">
+<div class="location">Karpaz</div>
+
+</div>
+</section>
+
+
+<section>
+
+<h2>Neden Kıbrıs Nicosia Transfer?</h2>
+
+<div class="cards">
+
+<div class="card">
 <h3>✓ Güvenilir</h3>
-<p>Rezervasyonunuza uygun zamanında transfer.</p>
-</div><div class="card">
+<p>
+Rezervasyonunuza uygun zamanında transfer.
+</p>
+</div>
+
+<div class="card">
 <h3>✓ Konforlu</h3>
-<p>Rahat ve konforlu yolculuk.</p>
-</div><div class="card">
+<p>
+Rahat ve konforlu yolculuk.
+</p>
+</div>
+
+<div class="card">
 <h3>✓ Profesyonel</h3>
-<p>Profesyonel havalimanı ve otel transfer hizmeti.</p>
-</div><div class="card">
+<p>
+Profesyonel havalimanı ve otel transfer hizmeti.
+</p>
+</div>
+
+<div class="card">
 <h3>✓ 7/24 İletişim</h3>
-<p>WhatsApp üzerinden kolay rezervasyon.</p>
-</div></div></section><section class="languages" id="diller"><h2>🌍 Dil Seçimi</h2><div class="language-buttons"><button onclick="showLanguage('tr')">🇹🇷 Türkçe</button>
+<p>
+WhatsApp üzerinden kolay rezervasyon.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<section class="languages" id="diller">
+
+<h2>🌍 Dil Seçimi</h2>
+
+<div class="language-buttons">
+
+<button onclick="showLanguage('tr')">🇹🇷 Türkçe</button>
 <button onclick="showLanguage('en')">🇬🇧 English</button>
 <button onclick="showLanguage('ru')">🇷🇺 Русский</button>
 <button onclick="showLanguage('he')">🇮🇱 עברית</button>
 <button onclick="showLanguage('ar')">🇸🇦 العربية</button>
 
-</div><div id="tr" class="language-content active">
+</div>
+
+
+<div id="tr" class="language-content active">
 <h3>Türkçe</h3>
-<p>Kıbrıs Nicosia Transfer ile Ercan ve Larnaca Havalimanlarından Kıbrıs genelindeki otellere 7/24 güvenilir transfer hizmeti.</p>
-</div><div id="en" class="language-content">
+<p>
+Kıbrıs Nicosia Transfer ile Ercan ve Larnaca
+Havalimanlarından Kıbrıs genelindeki otellere
+7/24 güvenilir transfer hizmeti.
+</p>
+</div>
+
+
+<div id="en" class="language-content">
 <h3>English</h3>
-<p>Cyprus Nicosia Transfer provides reliable and comfortable 24/7 airport and hotel transfer services across Cyprus.</p>
-</div><div id="ru" class="language-content">
+<p>
+Cyprus Nicosia Transfer provides reliable and
+comfortable 24/7 airport and hotel transfer
+services across Cyprus.
+</p>
+</div>
+
+
+<div id="ru" class="language-content">
 <h3>Русский</h3>
-<p>Cyprus Nicosia Transfer предлагает надежные и комфортные трансферы 24/7 из аэропортов и в отели по всему Кипру.</p>
-</div><div id="he" class="language-content">
+<p>
+Cyprus Nicosia Transfer предлагает надежные
+и комфортные трансферы 24/7 из аэропортов
+и в отели по всему Кипру.
+</p>
+</div>
+
+
+<div id="he" class="language-content">
 <h3>עברית</h3>
-<p dir="rtl">Cyprus Nicosia Transfer מספקת שירותי הסעות אמינים, נוחים ומקצועיים 24/7 משדות התעופה ולבתי המלון ברחבי קפריסין.</p>
-</div><div id="ar" class="language-content">
+<p dir="rtl">
+Cyprus Nicosia Transfer מספקת שירותי הסעות
+אמינים, נוחים ומקצועיים 24/7 משדות התעופה
+ולבתי המלון ברחבי קפריסין.
+</p>
+</div>
+
+
+<div id="ar" class="language-content">
 <h3>العربية</h3>
-<p dir="rtl">تقدم Cyprus Nicosia Transfer خدمات نقل موثوقة ومريحة واحترافية على مدار الساعة من المطارات وإلى الفنادق في جميع أنحاء قبرص.</p>
-</div></section><section class="contact" id="iletisim"><h2>📞 Rezervasyon ve İletişim</h2><p>Transfer rezervasyonunuz için bizimle iletişime geçin.</p><p><strong>Telefon / WhatsApp:</strong> +90 539 104 6030</p><a class="button"
+<p dir="rtl">
+تقدم Cyprus Nicosia Transfer خدمات نقل موثوقة
+ومريحة واحترافية على مدار الساعة من المطارات
+وإلى الفنادق في جميع أنحاء قبرص.
+</p>
+</div>
+
+</section>
+
+
+<section class="contact" id="iletisim">
+
+<h2>📞 Rezervasyon ve İletişim</h2>
+
+<p>
+Transfer rezervasyonunuz için bizimle iletişime geçin.
+</p>
+
+<p>
+<strong>Telefon / WhatsApp:</strong>
++90 539 104 6030
+</p>
+
+<a class="button"
 href="https://wa.me/905391046030"
 target="_blank">
 WhatsApp'tan Yaz
@@ -650,226 +716,293 @@ href="tel:+905391046030">
 Telefonla Ara
 </a>
 
-</section><footer><p>© 2026 Kıbrıs Nicosia Transfer</p>
-<p>Ercan Havalimanı • Larnaca Havalimanı • Otel • VIP Transfer</p>
-<p>Kıbrıs genelinde 7/24 transfer hizmeti</p></footer><script>
+<br>
+
+<button onclick="openReservation()" class="reservation-btn">
+🚐 Rezervasyon Formu
+</button>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Kıbrıs Nicosia Transfer</p>
+
+<p>
+Ercan Havalimanı • Larnaca Havalimanı •
+Otel • VIP Transfer
+</p>
+
+<p>
+Kıbrıs genelinde 7/24 transfer hizmeti
+</p>
+
+</footer>
+
+
+<!-- =========================
+     REZERVASYON PENCERESİ
+     ========================= -->
+
+<div id="reservationModal" class="reservation-modal">
+
+<div class="reservation-box">
+
+<button class="close-btn"
+onclick="closeReservation()">×</button>
+
+<h2>Rezervasyon Yap</h2>
+
+<p>
+Bilgilerinizi doldurun.
+</p>
+
+
+<form onsubmit="sendReservation(event)">
+
+<input
+type="text"
+id="customerName"
+placeholder="Ad Soyad"
+required
+>
+
+
+<input
+type="tel"
+id="customerPhone"
+placeholder="Telefon"
+required
+>
+
+
+<input
+type="text"
+id="pickup"
+placeholder="Nereden alınacak?"
+required
+>
+
+
+<input
+type="text"
+id="destination"
+placeholder="Nereye gidilecek?"
+required
+>
+
+
+<input
+type="date"
+id="reservationDate"
+required
+>
+
+
+<input
+type="time"
+id="reservationTime"
+required
+>
+
+
+<input
+type="number"
+id="guestCount"
+placeholder="Kişi Sayısı"
+min="1"
+required
+>
+
+
+<textarea
+id="reservationNote"
+placeholder="Ek not (isteğe bağlı)"
+></textarea>
+
+
+<button
+type="submit"
+class="send-reservation">
+
+REZERVASYON TALEBİ GÖNDER
+
+</button>
+
+</form>
+
+</div>
+</div>
+
+
+<script>
+
+/* DİL SEÇİMİ */
 
 function showLanguage(language){
 
-const contents=document.querySelectorAll(".language-content");
+const contents =
+document.querySelectorAll(".language-content");
 
 contents.forEach(function(content){
+
 content.classList.remove("active");
+
 });
 
-const selected=document.getElementById(language);
+const selected =
+document.getElementById(language);
 
 if(selected){
+
 selected.classList.add("active");
+
+}
+
+}
+
+
+/* REZERVASYON PENCERESİ */
+
+function openReservation(){
+
+document.getElementById(
+"reservationModal"
+).style.display="flex";
+
+}
+
+
+function closeReservation(){
+
+document.getElementById(
+"reservationModal"
+).style.display="none";
+
+}
+
+
+/* REZERVASYON → WHATSAPP */
+
+function sendReservation(event){
+
+event.preventDefault();
+
+
+const name =
+document.getElementById(
+"customerName"
+).value.trim();
+
+
+const phone =
+document.getElementById(
+"customerPhone"
+).value.trim();
+
+
+const pickup =
+document.getElementById(
+"pickup"
+).value.trim();
+
+
+const destination =
+document.getElementById(
+"destination"
+).value.trim();
+
+
+const date =
+document.getElementById(
+"reservationDate"
+).value;
+
+
+const time =
+document.getElementById(
+"reservationTime"
+).value;
+
+
+const guests =
+document.getElementById(
+"guestCount"
+).value;
+
+
+const note =
+document.getElementById(
+"reservationNote"
+).value.trim();
+
+
+const message =
+`🔔 YENİ REZERVASYON TALEBİ
+
+👤 Ad Soyad: ${name}
+
+📞 Telefon: ${phone}
+
+📍 Nereden:
+${pickup}
+
+📍 Nereye:
+${destination}
+
+📅 Tarih: ${date}
+
+🕐 Saat: ${time}
+
+👥 Kişi Sayısı: ${guests}
+
+📝 Not:
+${note || "Yok"}
+
+⏳ DURUM: ONAY BEKLİYOR`;
+
+
+const whatsappNumber =
+"905391046030";
+
+
+const whatsappURL =
+"https://wa.me/" +
+whatsappNumber +
+"?text=" +
+encodeURIComponent(message);
+
+
+window.open(
+whatsappURL,
+"_blank"
+);
+
+
+closeReservation();
+
+}
+
+
+/* MODAL DIŞINA TIKLAYINCA KAPAT */
+
+document.getElementById(
+"reservationModal"
+).addEventListener(
+"click",
+function(event){
+
+if(event.target === this){
+
+closeReservation();
+
 }
 
 }
-<!-- ================= REZERVASYON SİSTEMİ ================= -->
+);
 
-<button onclick="openReservation()" class="reservation-btn">
-  🚐 REZERVASYON YAP
-</button>
-
-<div id="reservationModal" class="reservation-modal">
-  <div class="reservation-box">
-
-    <button class="close-btn" onclick="closeReservation()">×</button>
-
-    <h2>Rezervasyon Yap</h2>
-
-    <form onsubmit="sendReservation(event)">
-
-      <input id="customerName"
-             type="text"
-             placeholder="Ad Soyad"
-             required>
-
-      <input id="customerPhone"
-             type="tel"
-             placeholder="Telefon"
-             required>
-
-      <input id="pickup"
-             type="text"
-             placeholder="Nereden?"
-             required>
-
-      <input id="destination"
-             type="text"
-             placeholder="Nereye?"
-             required>
-
-      <input id="reservationDate"
-             type="date"
-             required>
-
-      <input id="reservationTime"
-             type="time"
-             required>
-
-      <input id="guestCount"
-             type="number"
-             min="1"
-             placeholder="Kişi Sayısı"
-             required>
-
-      <textarea id="reservationNote"
-                placeholder="Ek not"></textarea>
-
-      <button type="submit" class="send-reservation">
-        REZERVASYON TALEBİ GÖNDER
-      </button>
-
-    </form>
-  </div>
-</div>
-
-<style>
-.reservation-btn {
-  background:#25D366;
-  color:white;
-  border:0;
-  padding:15px 28px;
-  border-radius:10px;
-  font-size:17px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.reservation-modal {
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.75);
-  z-index:99999;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-}
-
-.reservation-box {
-  width:100%;
-  max-width:450px;
-  max-height:90vh;
-  overflow:auto;
-  background:white;
-  border-radius:18px;
-  padding:25px;
-  position:relative;
-}
-
-.reservation-box input,
-.reservation-box textarea {
-  width:100%;
-  box-sizing:border-box;
-  padding:13px;
-  margin-bottom:12px;
-  border:1px solid #ddd;
-  border-radius:8px;
-  font-size:15px;
-}
-
-.reservation-box textarea {
-  min-height:80px;
-}
-
-.close-btn {
-  position:absolute;
-  right:12px;
-  top:8px;
-  border:0;
-  background:none;
-  font-size:30px;
-  cursor:pointer;
-}
-
-.send-reservation {
-  width:100%;
-  padding:15px;
-  border:0;
-  border-radius:9px;
-  background:#25D366;
-  color:white;
-  font-weight:bold;
-  font-size:16px;
-  cursor:pointer;
-}
-</style>
-
-<script>
-function openReservation() {
-  document.getElementById("reservationModal").style.display = "flex";
-}
-
-function closeReservation() {
-  document.getElementById("reservationModal").style.display = "none";
-}
-
-function sendReservation(event) {
-
-  event.preventDefault();
-
-  const name =
-    document.getElementById("customerName").value;
-
-  const phone =
-    document.getElementById("customerPhone").value;
-
-  const pickup =
-    document.getElementById("pickup").value;
-
-  const destination =
-    document.getElementById("destination").value;
-
-  const date =
-    document.getElementById("reservationDate").value;
-
-  const time =
-    document.getElementById("reservationTime").value;
-
-  const guests =
-    document.getElementById("guestCount").value;
-
-  const note =
-    document.getElementById("reservationNote").value || "Yok";
-
-
-  const message =
-`🔔 YENİ REZERVASYON
-
-👤 ${name}
-📞 ${phone}
-
-📍 ${pickup}
-➡️ ${destination}
-
-📅 ${date}
-🕐 ${time}
-👥 ${guests} kişi
-
-📝 ${note}
-
-⏳ ONAY BEKLİYOR`;
-
-  const whatsappNumber = "905391046030";
-
-  const url =
-    "https://wa.me/" +
-    whatsappNumber +
-    "?text=" +
-    encodeURIComponent(message);
-
-  window.open(url, "_blank");
-
-  closeReservation();
-}
 </script>
 
-<!-- ================= REZERVASYON SİSTEMİ SON ================= -->
-</script></body>
-</html>           
+</body>
+</html>
