@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cebkveh-ops.github.io/KibrisNicosiaTransferr/sitemap.xml
