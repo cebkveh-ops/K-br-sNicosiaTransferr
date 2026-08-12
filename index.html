@@ -33,8 +33,6 @@ body {
   background: #eefaff;
 }
 
-/* HEADER */
-
 header {
   background: linear-gradient(135deg, #087fa8, #48c8ed);
   color: white;
@@ -57,10 +55,7 @@ header {
 .logo {
   font-size: 22px;
   font-weight: 800;
-  letter-spacing: .2px;
 }
-
-/* LANGUAGE */
 
 .language {
   position: relative;
@@ -68,8 +63,6 @@ header {
 }
 
 .language select {
-  appearance: auto;
-  -webkit-appearance: auto;
   background: #ffffff;
   color: #111111;
   border: 2px solid #d4a017;
@@ -79,11 +72,7 @@ header {
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
-  outline: none;
-  box-shadow: 0 3px 12px rgba(0,0,0,.25);
 }
-
-/* HERO */
 
 .hero {
   min-height: 560px;
@@ -132,8 +121,6 @@ header {
   font-weight: bold;
 }
 
-/* BUTTONS */
-
 .buttons {
   display: flex;
   justify-content: center;
@@ -166,8 +153,6 @@ header {
   color: white;
 }
 
-/* GENERAL */
-
 section {
   padding: 65px 20px;
 }
@@ -191,8 +176,6 @@ section {
 .section-title p {
   font-size: 17px;
 }
-
-/* REGIONS */
 
 .regions-section {
   background: #ffffff;
@@ -223,8 +206,6 @@ section {
   background: #b7ebfa;
 }
 
-/* SERVICES */
-
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -249,8 +230,6 @@ section {
   margin-bottom: 10px;
   color: #087fa8;
 }
-
-/* BOOKING */
 
 .booking {
   background: linear-gradient(135deg, #087fa8, #64d1f1);
@@ -315,6 +294,42 @@ textarea {
   resize: vertical;
 }
 
+/* FİYAT ALANI */
+
+.price-box {
+  grid-column: 1 / -1;
+  margin-top: 5px;
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e8faff, #c8f2fc);
+  border: 2px solid #8edff5;
+  text-align: center;
+}
+
+.price-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #075b78;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 900;
+  color: #087fa8;
+}
+
+.price-note {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #555;
+}
+
+.special-price {
+  color: #d35400;
+  font-weight: bold;
+}
+
 .submit {
   width: 100%;
   margin-top: 18px;
@@ -322,8 +337,6 @@ textarea {
   color: white;
   font-size: 17px;
 }
-
-/* CONTACT */
 
 .contact-section {
   background: #eefaff;
@@ -360,8 +373,6 @@ textarea {
   text-decoration: none;
 }
 
-/* SEO */
-
 .seo-text {
   background: white;
 }
@@ -379,8 +390,6 @@ textarea {
 .seo-content p {
   margin-bottom: 14px;
 }
-
-/* FLOATING WHATSAPP */
 
 .whatsapp-float {
   position: fixed;
@@ -400,16 +409,12 @@ textarea {
   box-shadow: 0 5px 20px rgba(0,0,0,.25);
 }
 
-/* FOOTER */
-
 footer {
   background: #06364b;
   color: white;
   text-align: center;
   padding: 28px 15px;
 }
-
-/* MOBILE */
 
 @media (max-width: 650px) {
 
@@ -419,8 +424,6 @@ footer {
 
   .nav {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .logo {
@@ -442,7 +445,8 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .form-group.full {
+  .form-group.full,
+  .price-box {
     grid-column: auto;
   }
 
@@ -463,27 +467,27 @@ footer {
 
 <header>
 
-  <div class="nav">
+<div class="nav">
 
-    <div class="logo" data-i18n="logo">
-      🚐 Kıbrıs Nicosia Transfer
-    </div>
+<div class="logo" data-i18n="logo">
+🚐 Kıbrıs Nicosia Transfer
+</div>
 
-    <div class="language">
+<div class="language">
 
-      <select id="languageSelect" onchange="changeLanguage(this.value)">
+<select id="languageSelect" onchange="changeLanguage(this.value)">
 
-        <option value="tr">🇹🇷 Türkçe</option>
-        <option value="en">🇬🇧 English</option>
-        <option value="de">🇩🇪 Deutsch</option>
-        <option value="ru">🇷🇺 Русский</option>
-        <option value="fr">🇫🇷 Français</option>
+<option value="tr">🇹🇷 Türkçe</option>
+<option value="en">🇬🇧 English</option>
+<option value="de">🇩🇪 Deutsch</option>
+<option value="ru">🇷🇺 Русский</option>
+<option value="fr">🇫🇷 Français</option>
 
-      </select>
+</select>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </header>
 
@@ -491,42 +495,40 @@ footer {
 
 <section class="hero">
 
-  <div class="hero-content">
+<div class="hero-content">
 
-    <h1 data-i18n="heroTitle">
-      Kıbrıs Nicosia Transfer
-    </h1>
+<h1 data-i18n="heroTitle">
+Kıbrıs Nicosia Transfer
+</h1>
 
-    <p data-i18n="heroText">
-      Yeni Ercan Havalimanı ve Kıbrıs genelinde 7/24 güvenli, konforlu ve özel transfer hizmeti.
-    </p>
+<p data-i18n="heroText">
+Yeni Ercan Havalimanı ve Kıbrıs genelinde 7/24 güvenli, konforlu ve özel transfer hizmeti.
+</p>
 
-    <div class="hero-badges">
+<div class="hero-badges">
 
-      <div class="badge">✈️ Yeni Ercan Havalimanı</div>
-      <div class="badge">🚐 7/24 Transfer</div>
-      <div class="badge">⭐ Özel & VIP</div>
-      <div class="badge">💬 WhatsApp</div>
+<div class="badge">✈️ Yeni Ercan Havalimanı</div>
+<div class="badge">🚐 7/24 Transfer</div>
+<div class="badge">⭐ Özel & VIP</div>
+<div class="badge">💬 WhatsApp</div>
 
-    </div>
+</div>
 
-    <div class="buttons">
+<div class="buttons">
 
-      <a href="#booking"
-         class="btn btn-primary"
-         data-i18n="bookNow">
-        Rezervasyon Yap
-      </a>
+<a href="#booking" class="btn btn-primary" data-i18n="bookNow">
+Rezervasyon Yap
+</a>
 
-      <a href="https://wa.me/905391046030"
-         class="btn btn-whatsapp"
-         target="_blank">
-        💬 WhatsApp
-      </a>
+<a href="https://wa.me/905391046030"
+class="btn btn-whatsapp"
+target="_blank">
+💬 WhatsApp
+</a>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
@@ -534,43 +536,35 @@ footer {
 
 <section class="regions-section">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
+<div class="section-title">
 
-      <h2 data-i18n="regionsTitle">
-        Kıbrıs Transfer Bölgeleri
-      </h2>
+<h2 data-i18n="regionsTitle">
+Kıbrıs Transfer Bölgeleri
+</h2>
 
-      <p data-i18n="regionsText">
-        Kıbrıs'ın tüm önemli bölgelerine güvenli ve konforlu transfer.
-      </p>
+<p data-i18n="regionsText">
+Kıbrıs'ın tüm önemli bölgelerine güvenli ve konforlu transfer.
+</p>
 
-    </div>
+</div>
 
-    <div class="regions">
+<div class="regions">
 
-      <a href="#booking" class="region">📍 Lefkoşa</a>
+<a href="#booking" class="region">📍 Lefkoşa</a>
+<a href="#booking" class="region">📍 Girne</a>
+<a href="#booking" class="region">📍 Gazimağusa</a>
+<a href="#booking" class="region">📍 İskele</a>
+<a href="#booking" class="region">📍 Bafra</a>
+<a href="#booking" class="region">📍 Lefke</a>
+<a href="#booking" class="region">📍 Güzelyurt</a>
+<a href="#booking" class="region">✈️ Yeni Ercan Havalimanı</a>
+<a href="#booking" class="region">✈️ Larnaka Havalimanı</a>
 
-      <a href="#booking" class="region">📍 Girne</a>
+</div>
 
-      <a href="#booking" class="region">📍 Gazimağusa</a>
-
-      <a href="#booking" class="region">📍 İskele</a>
-
-      <a href="#booking" class="region">📍 Bafra</a>
-
-      <a href="#booking" class="region">📍 Lefke</a>
-
-      <a href="#booking" class="region">📍 Güzelyurt</a>
-
-      <a href="#booking" class="region">✈️ Yeni Ercan Havalimanı</a>
-
-      <a href="#booking" class="region">✈️ Larnaka Havalimanı</a>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
@@ -578,81 +572,81 @@ footer {
 
 <section>
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
+<div class="section-title">
 
-      <h2 data-i18n="servicesTitle">
-        Kıbrıs Transfer Hizmetlerimiz
-      </h2>
+<h2 data-i18n="servicesTitle">
+Kıbrıs Transfer Hizmetlerimiz
+</h2>
 
-      <p data-i18n="servicesText">
-        İhtiyacınıza uygun güvenli ve profesyonel transfer seçenekleri.
-      </p>
+<p data-i18n="servicesText">
+İhtiyacınıza uygun güvenli ve profesyonel transfer seçenekleri.
+</p>
 
-    </div>
+</div>
 
-    <div class="services">
+<div class="services">
 
-      <div class="card">
+<div class="card">
 
-        <div class="icon">✈️</div>
+<div class="icon">✈️</div>
 
-        <h3 data-i18n="airportTitle">
-          Yeni Ercan Havalimanı Transferi
-        </h3>
+<h3 data-i18n="airportTitle">
+Yeni Ercan Havalimanı Transferi
+</h3>
 
-        <p data-i18n="airportText">
-          Yeni Ercan Havalimanı'ndan Lefkoşa, Girne, Gazimağusa, İskele, Bafra, Lefke ve Güzelyurt'a özel transfer.
-        </p>
+<p data-i18n="airportText">
+Yeni Ercan Havalimanı'ndan Lefkoşa, Girne, Gazimağusa, İskele, Bafra, Lefke ve Güzelyurt'a özel transfer.
+</p>
 
-      </div>
+</div>
 
-      <div class="card">
+<div class="card">
 
-        <div class="icon">🚐</div>
+<div class="icon">🚐</div>
 
-        <h3 data-i18n="privateTitle">
-          Özel Transfer
-        </h3>
+<h3 data-i18n="privateTitle">
+Özel Transfer
+</h3>
 
-        <p data-i18n="privateText">
-          Size özel araç ve profesyonel sürücü ile konforlu ulaşım.
-        </p>
+<p data-i18n="privateText">
+Size özel araç ve profesyonel sürücü ile konforlu ulaşım.
+</p>
 
-      </div>
+</div>
 
-      <div class="card">
+<div class="card">
 
-        <div class="icon">🏨</div>
+<div class="icon">🏨</div>
 
-        <h3 data-i18n="hotelTitle">
-          Kıbrıs Otel Transferi
-        </h3>
+<h3 data-i18n="hotelTitle">
+Kıbrıs Otel Transferi
+</h3>
 
-        <p data-i18n="hotelText">
-          Kıbrıs'taki otellerden havalimanına veya havalimanından otelinize güvenli transfer.
-        </p>
+<p data-i18n="hotelText">
+Kıbrıs'taki otellerden havalimanına veya havalimanından otelinize güvenli transfer.
+</p>
 
-      </div>
+</div>
 
-      <div class="card">
+<div class="card">
 
-        <div class="icon">⭐</div>
+<div class="icon">⭐</div>
 
-        <h3 data-i18n="vipTitle">
-          VIP Transfer
-        </h3>
+<h3 data-i18n="vipTitle">
+VIP Transfer
+</h3>
 
-        <p data-i18n="vipText">
-          Özel günler, iş seyahatleri ve VIP ulaşım ihtiyaçları için konforlu transfer.
-        </p>
+<p data-i18n="vipText">
+Özel günler, iş seyahatleri ve VIP ulaşım ihtiyaçları için konforlu transfer.
+</p>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
@@ -660,160 +654,280 @@ footer {
 
 <section id="booking" class="booking">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
+<div class="section-title">
 
-      <h2 data-i18n="bookingTitle">
-        Kıbrıs Transfer Rezervasyonu
-      </h2>
+<h2 data-i18n="bookingTitle">
+Kıbrıs Transfer Rezervasyonu
+</h2>
 
-      <p data-i18n="bookingText">
-        Bilgilerinizi doldurun. Rezervasyonunuz WhatsApp üzerinden bize iletilsin.
-      </p>
+<p data-i18n="bookingText">
+Bilgilerinizi doldurun. Güzergâhınızı seçin ve fiyatınızı hemen görün.
+</p>
 
-    </div>
+</div>
 
-    <form onsubmit="sendWhatsApp(event)">
+<form onsubmit="sendWhatsApp(event)">
 
-      <div class="form-grid">
+<div class="form-grid">
 
-        <div class="form-group">
+<div class="form-group">
 
-          <label data-i18n="name">
-            Ad Soyad
-          </label>
+<label data-i18n="name">
+Ad Soyad
+</label>
 
-          <input
-            id="name"
-            type="text"
-            placeholder="Adınız ve soyadınız"
-            required>
+<input
+id="name"
+type="text"
+placeholder="Adınız ve soyadınız"
+required>
 
-        </div>
+</div>
 
-        <div class="form-group">
+<div class="form-group">
 
-          <label data-i18n="phone">
-            Telefon / WhatsApp
-          </label>
+<label data-i18n="phone">
+Telefon / WhatsApp
+</label>
 
-          <input
-            id="phone"
-            type="tel"
-            placeholder="+90"
-            required>
+<input
+id="phone"
+type="tel"
+placeholder="+90"
+required>
 
-        </div>
+</div>
 
-        <div class="form-group">
+<div class="form-group">
 
-          <label data-i18n="date">
-            Transfer Tarihi
-          </label>
+<label data-i18n="date">
+Transfer Tarihi
+</label>
 
-          <input id="date" type="date" required>
+<input id="date" type="date" required>
 
-        </div>
+</div>
 
-        <div class="form-group">
+<div class="form-group">
 
-          <label data-i18n="time">
-            Transfer Saati
-          </label>
+<label data-i18n="time">
+Transfer Saati
+</label>
 
-          <input id="time" type="time" required>
+<input id="time" type="time" required>
 
-        </div>
+</div>
 
-        <div class="form-group">
+<div class="form-group">
 
-          <label data-i18n="pickup">
-            Alınış Noktası
-          </label>
+<label data-i18n="pickup">
+Alınış Noktası
+</label>
 
-          <input
-            id="pickup"
-            type="text"
-            placeholder="Örn: Yeni Ercan Havalimanı"
-            required>
+<select id="pickup" onchange="calculatePrice()" required>
 
-        </div>
+<option value="">Alınış noktasını seçin</option>
 
-        <div class="form-group">
+<option value="Ercan Havaalanı">
+✈️ Ercan Havaalanı
+</option>
 
-          <label data-i18n="dropoff">
-            Gidilecek Yer / Otel
-          </label>
+</select>
 
-          <input
-            id="dropoff"
-            type="text"
-            placeholder="Örn: Girne / Otel adı"
-            required>
+</div>
 
-        </div>
+<div class="form-group">
 
-        <div class="form-group">
+<label data-i18n="dropoff">
+Gidilecek Yer / Otel
+</label>
 
-          <label data-i18n="passengers">
-            Yolcu Sayısı
-          </label>
+<select id="dropoff" onchange="calculatePrice()" required>
 
-          <select id="passengers">
+<option value="">
+Gidilecek yeri seçin
+</option>
 
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8+</option>
+<option value="Limak Otel">
+Limak Otel
+</option>
 
-          </select>
+<option value="Concord Bafra">
+Concord Bafra
+</option>
 
-        </div>
+<option value="Kaya Artemis">
+Kaya Artemis
+</option>
 
-        <div class="form-group">
+<option value="Nuh'un Gemisi">
+Nuh'un Gemisi
+</option>
 
-          <label data-i18n="flight">
-            Uçuş Numarası
-          </label>
+<option value="Arkın İskele">
+Arkın İskele
+</option>
 
-          <input
-            id="flight"
-            type="text"
-            placeholder="Varsa uçuş numaranız">
+<option value="Merit Garden">
+Merit Garden
+</option>
 
-        </div>
+<option value="Grand Sapphire">
+Grand Sapphire
+</option>
 
-        <div class="form-group full">
+<option value="Salamis Bay Conti">
+Salamis Bay Conti
+</option>
 
-          <label data-i18n="message">
-            Ek Bilgi
-          </label>
+<option value="Mağusa Otelleri">
+Mağusa Otelleri
+</option>
 
-          <textarea
-            id="message"
-            placeholder="Bagaj, çocuk koltuğu veya diğer bilgiler"></textarea>
+<option value="Lefkoşa">
+Lefkoşa
+</option>
 
-        </div>
+<option value="Gönyeli">
+Gönyeli
+</option>
 
-      </div>
+<option value="Girne Merkez">
+Girne Merkez
+</option>
 
-      <button
-        class="btn submit"
-        type="submit"
-        data-i18n="sendBooking">
+<option value="Acapulco Otel">
+Acapulco Otel
+</option>
 
-        📲 WhatsApp ile Rezervasyon Gönder
+<option value="Elexus">
+Elexus
+</option>
 
-      </button>
+<option value="Cratos Otel">
+Cratos Otel
+</option>
 
-    </form>
+<option value="Chamada Otel">
+Chamada Otel
+</option>
 
-  </div>
+<option value="Merit Park">
+Merit Park
+</option>
+
+<option value="Merit Royal">
+Merit Royal
+</option>
+
+<option value="Esentepe">
+Esentepe
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label data-i18n="passengers">
+Yolcu Sayısı
+</label>
+
+<select id="passengers" onchange="calculatePrice()">
+
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label data-i18n="tripType">
+Transfer Tipi
+</label>
+
+<select id="tripType" onchange="calculatePrice()">
+
+<option value="oneway" data-i18n="oneway">
+Tek Yön
+</option>
+
+<option value="roundtrip" data-i18n="roundtrip">
+Gidiş - Dönüş
+</option>
+
+</select>
+
+</div>
+
+<!-- FİYAT -->
+
+<div class="price-box">
+
+<div class="price-title" data-i18n="priceTitle">
+Transfer Fiyatınız
+</div>
+
+<div id="price" class="price">
+Güzergâh seçiniz
+</div>
+
+<div id="priceNote" class="price-note">
+1–5 kişi için toplam transfer fiyatıdır.
+</div>
+
+</div>
+
+<div class="form-group full">
+
+<label data-i18n="flight">
+Uçuş Numarası
+</label>
+
+<input
+id="flight"
+type="text"
+placeholder="Varsa uçuş numaranız">
+
+</div>
+
+<div class="form-group full">
+
+<label data-i18n="message">
+Ek Bilgi
+</label>
+
+<textarea
+id="message"
+placeholder="Bagaj, çocuk koltuğu veya diğer bilgiler"></textarea>
+
+</div>
+
+</div>
+
+<button
+class="btn submit"
+type="submit"
+data-i18n="sendBooking">
+
+📲 WhatsApp ile Rezervasyon Gönder
+
+</button>
+
+</form>
+
+</div>
 
 </section>
 
@@ -821,137 +935,168 @@ footer {
 
 <section class="contact-section">
 
-  <div class="container">
+<div class="container">
 
-    <div class="section-title">
+<div class="section-title">
 
-      <h2 data-i18n="contactTitle">
-        Kıbrıs Nicosia Transfer İletişim
-      </h2>
+<h2 data-i18n="contactTitle">
+Kıbrıs Nicosia Transfer İletişim
+</h2>
 
-    </div>
+</div>
 
-    <div class="contact">
+<div class="contact">
 
-      <div class="contact-box">
+<div class="contact-box">
 
-        <div class="icon">📱</div>
+<div class="icon">📱</div>
 
-        <h3 data-i18n="phoneTitle">
-          Telefon
-        </h3>
+<h3 data-i18n="phoneTitle">
+Telefon
+</h3>
 
-        <p>
-          <a href="tel:+905391046030">
-            +90 539 104 60 30
-          </a>
-        </p>
+<p>
+<a href="tel:+905391046030">
++90 539 104 60 30
+</a>
+</p>
 
-      </div>
+</div>
 
-      <div class="contact-box">
+<div class="contact-box">
 
-        <div class="icon">💬</div>
+<div class="icon">💬</div>
 
-        <h3>
-          WhatsApp
-        </h3>
+<h3>
+WhatsApp
+</h3>
 
-        <p>
+<p>
 
-          <a
-            href="https://wa.me/905391046030"
-            target="_blank">
+<a href="https://wa.me/905391046030"
+target="_blank">
 
-            +90 539 104 60 30
++90 539 104 60 30
 
-          </a>
+</a>
 
-        </p>
+</p>
 
-      </div>
+</div>
 
-      <div class="contact-box">
+<div class="contact-box">
 
-        <div class="icon">📍</div>
+<div class="icon">📍</div>
 
-        <h3 data-i18n="locationTitle">
-          Konum
-        </h3>
+<h3 data-i18n="locationTitle">
+Konum
+</h3>
 
-        <p data-i18n="locationText">
-          Lefkoşa, Kuzey Kıbrıs • Yeni Ercan Havalimanı
-        </p>
+<p data-i18n="locationText">
+Lefkoşa, Kuzey Kıbrıs • Yeni Ercan Havalimanı
+</p>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
-<!-- SEO TEXT -->
+<!-- SEO -->
 
 <section class="seo-text">
 
-  <div class="seo-content">
+<div class="seo-content">
 
-    <h2 data-i18n="seoTitle">
-      Kıbrıs Transfer Hizmeti
-    </h2>
+<h2 data-i18n="seoTitle">
+Kıbrıs Transfer Hizmeti
+</h2>
 
-    <p data-i18n="seo1">
-      Kıbrıs Nicosia Transfer olarak Yeni Ercan Havalimanı, Larnaka Havalimanı, Lefkoşa, Girne, Gazimağusa, İskele, Bafra, Lefke ve Güzelyurt bölgelerine 7/24 özel transfer hizmeti sunuyoruz.
-    </p>
+<p data-i18n="seo1">
+Kıbrıs Nicosia Transfer olarak Yeni Ercan Havalimanı, Larnaka Havalimanı, Lefkoşa, Girne, Gazimağusa, İskele, Bafra, Lefke ve Güzelyurt bölgelerine 7/24 özel transfer hizmeti sunuyoruz.
+</p>
 
-    <p data-i18n="seo2">
-      Yeni Ercan Havalimanı transfer, Kıbrıs havalimanı transfer, Kıbrıs otel transferi ve şehirler arası transfer ihtiyaçlarınız için güvenli, konforlu ve zamanında ulaşım sağlıyoruz.
-    </p>
+<p data-i18n="seo2">
+Yeni Ercan Havalimanı transfer, Kıbrıs havalimanı transfer, Kıbrıs otel transferi ve şehirler arası transfer ihtiyaçlarınız için güvenli, konforlu ve zamanında ulaşım sağlıyoruz.
+</p>
 
-    <p data-i18n="seo3">
-      Lefkoşa transfer, Girne transfer, Gazimağusa transfer, Mağusa transfer, İskele transfer, Bafra transfer, Lefke transfer ve Güzelyurt transfer rezervasyonlarınızı WhatsApp üzerinden kolayca oluşturabilirsiniz.
-    </p>
+<p data-i18n="seo3">
+Lefkoşa transfer, Girne transfer, Gazimağusa transfer, Mağusa transfer, İskele transfer, Bafra transfer, Lefke transfer ve Güzelyurt transfer rezervasyonlarınızı WhatsApp üzerinden kolayca oluşturabilirsiniz.
+</p>
 
-  </div>
+</div>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 
-  <p>
+<p>
 
-    © <span id="year"></span>
+© <span id="year"></span>
 
-    <span data-i18n="logo">
-      🚐 Kıbrıs Nicosia Transfer
-    </span>
+<span data-i18n="logo">
+🚐 Kıbrıs Nicosia Transfer
+</span>
 
-    -
+-
 
-    <span data-i18n="rights">
-      Tüm hakları saklıdır.
-    </span>
+<span data-i18n="rights">
+Tüm hakları saklıdır.
+</span>
 
-  </p>
+</p>
 
 </footer>
 
-<!-- FLOATING WHATSAPP -->
-
 <a
-  class="whatsapp-float"
-  href="https://wa.me/905391046030"
-  target="_blank"
-  aria-label="WhatsApp">
+class="whatsapp-float"
+href="https://wa.me/905391046030"
+target="_blank"
+aria-label="WhatsApp">
 
-  💬
+💬
 
 </a>
 
 <script>
+
+/* =========================================
+   FİYAT LİSTESİ
+   1–5 KİŞİ İÇİN TOPLAM TEK YÖN FİYATLARI
+   ========================================= */
+
+const prices = {
+
+"Limak Otel": 4750,
+"Concord Bafra": 4800,
+"Kaya Artemis": 4750,
+"Nuh'un Gemisi": 4800,
+
+"Arkın İskele": 4000,
+"Merit Garden": 4000,
+"Grand Sapphire": 4000,
+"Salamis Bay Conti": 3750,
+
+"Mağusa Otelleri": 3500,
+"Lefkoşa": 2600,
+"Gönyeli": 2800,
+"Girne Merkez": 3600,
+"Acapulco Otel": 3000,
+"Elexus": 3250,
+"Cratos Otel": 3300,
+"Chamada Otel": 3300,
+"Merit Park": 4000,
+"Merit Royal": 4500,
+"Esentepe": 4000
+
+};
+
+
+/* =========================================
+   DİLLER
+   ========================================= */
 
 const translations = {
 
@@ -991,7 +1136,7 @@ vipText:"Özel günler, iş seyahatleri ve VIP ulaşım ihtiyaçları için konf
 
 bookingTitle:"Kıbrıs Transfer Rezervasyonu",
 
-bookingText:"Bilgilerinizi doldurun. Rezervasyonunuz WhatsApp üzerinden bize iletilsin.",
+bookingText:"Bilgilerinizi doldurun. Güzergâhınızı seçin ve fiyatınızı hemen görün.",
 
 name:"Ad Soyad",
 
@@ -1006,6 +1151,14 @@ pickup:"Alınış Noktası",
 dropoff:"Gidilecek Yer / Otel",
 
 passengers:"Yolcu Sayısı",
+
+tripType:"Transfer Tipi",
+
+oneway:"Tek Yön",
+
+roundtrip:"Gidiş - Dönüş",
+
+priceTitle:"Transfer Fiyatınız",
 
 flight:"Uçuş Numarası",
 
@@ -1045,438 +1198,4 @@ heroText:"Safe, comfortable and private 24/7 transfer service from Ercan Airport
 
 bookNow:"Book Now",
 
-regionsTitle:"Cyprus Transfer Areas",
-
-regionsText:"Safe and comfortable transfers to all major areas of Cyprus.",
-
-servicesTitle:"Our Cyprus Transfer Services",
-
-servicesText:"Safe and professional transfer options for your needs.",
-
-airportTitle:"New Ercan Airport Transfer",
-
-airportText:"Private transfers from New Ercan Airport to Nicosia, Kyrenia, Famagusta, Iskele, Bafra, Lefke and Guzelyurt.",
-
-privateTitle:"Private Transfer",
-
-privateText:"Comfortable transportation with a private vehicle and professional driver.",
-
-hotelTitle:"Cyprus Hotel Transfer",
-
-hotelText:"Safe transportation from Cyprus hotels to the airport or from the airport to your hotel.",
-
-vipTitle:"VIP Transfer",
-
-vipText:"Comfortable transfers for special occasions, business trips and VIP transportation.",
-
-bookingTitle:"Cyprus Transfer Reservation",
-
-bookingText:"Fill in your details and send your reservation to us via WhatsApp.",
-
-name:"Full Name",
-
-phone:"Phone / WhatsApp",
-
-date:"Transfer Date",
-
-time:"Transfer Time",
-
-pickup:"Pickup Location",
-
-dropoff:"Destination / Hotel",
-
-passengers:"Number of Passengers",
-
-flight:"Flight Number",
-
-message:"Additional Information",
-
-sendBooking:"📲 Send Reservation via WhatsApp",
-
-contactTitle:"Cyprus Nicosia Transfer Contact",
-
-phoneTitle:"Phone",
-
-locationTitle:"Location",
-
-locationText:"Nicosia, Northern Cyprus • New Ercan Airport",
-
-seoTitle:"Cyprus Transfer Service",
-
-seo1:"Cyprus Nicosia Transfer provides 24/7 private transfer services from New Ercan Airport and Larnaca Airport to Nicosia, Kyrenia, Famagusta, Iskele, Bafra, Lefke and Guzelyurt.",
-
-seo2:"We provide safe, comfortable and punctual airport transfers, hotel transfers and intercity transfers throughout Cyprus.",
-
-seo3:"Book your Nicosia, Kyrenia, Famagusta, Iskele, Bafra, Lefke or Guzelyurt transfer easily through WhatsApp.",
-
-rights:"All rights reserved.",
-
-whatsappMessage:"Hello, I would like to make a Cyprus transfer reservation."
-
-},
-
-de: {
-
-logo:"🚐 Zypern Nicosia Transfer",
-
-heroTitle:"Zypern Nicosia Transfer",
-
-heroText:"Sicherer, komfortabler und privater 24/7 Transferservice vom Flughafen Ercan und in ganz Zypern.",
-
-bookNow:"Jetzt buchen",
-
-regionsTitle:"Transfergebiete auf Zypern",
-
-regionsText:"Sichere und komfortable Transfers in alle wichtigen Regionen Zyperns.",
-
-servicesTitle:"Unsere Transferleistungen",
-
-servicesText:"Sichere und professionelle Transfermöglichkeiten.",
-
-airportTitle:"Transfer vom neuen Flughafen Ercan",
-
-airportText:"Private Transfers vom neuen Flughafen Ercan nach Nikosia, Kyrenia, Famagusta, İskele, Bafra, Lefke und Güzelyurt.",
-
-privateTitle:"Privattransfer",
-
-privateText:"Komfortabler Transport mit privatem Fahrzeug und professionellem Fahrer.",
-
-hotelTitle:"Hoteltransfer Zypern",
-
-hotelText:"Sicherer Transport von Ihrem Hotel zum Flughafen oder vom Flughafen zu Ihrem Hotel.",
-
-vipTitle:"VIP Transfer",
-
-vipText:"Komfortable Transfers für Geschäftsreisen, besondere Anlässe und VIP-Fahrten.",
-
-bookingTitle:"Transferreservierung",
-
-bookingText:"Füllen Sie Ihre Daten aus und senden Sie Ihre Reservierung per WhatsApp.",
-
-name:"Vor- und Nachname",
-
-phone:"Telefon / WhatsApp",
-
-date:"Transferdatum",
-
-time:"Transferzeit",
-
-pickup:"Abholort",
-
-dropoff:"Ziel / Hotel",
-
-passengers:"Anzahl der Passagiere",
-
-flight:"Flugnummer",
-
-message:"Zusätzliche Informationen",
-
-sendBooking:"📲 Reservierung per WhatsApp senden",
-
-contactTitle:"Kontakt",
-
-phoneTitle:"Telefon",
-
-locationTitle:"Standort",
-
-locationText:"Nikosia, Nordzypern • Neuer Flughafen Ercan",
-
-seoTitle:"Transfer-Service auf Zypern",
-
-seo1:"Zypern Nicosia Transfer bietet 24/7 private Transfers vom neuen Flughafen Ercan und vom Flughafen Larnaka nach Nikosia, Kyrenia, Famagusta, İskele, Bafra, Lefke und Güzelyurt.",
-
-seo2:"Wir bieten sichere, komfortable und pünktliche Flughafen-, Hotel- und Intercity-Transfers auf ganz Zypern.",
-
-seo3:"Buchen Sie Ihren Transfer nach Nikosia, Kyrenia, Famagusta, İskele, Bafra, Lefke oder Güzelyurt einfach über WhatsApp.",
-
-rights:"Alle Rechte vorbehalten.",
-
-whatsappMessage:"Hallo, ich möchte einen Transfer auf Zypern reservieren."
-
-},
-
-ru: {
-
-logo:"🚐 Трансфер Никосия, Кипр",
-
-heroTitle:"Трансфер Никосия, Кипр",
-
-heroText:"Безопасный, комфортный и частный трансфер 24/7 из нового аэропорта Эрджан и по всему Кипру.",
-
-bookNow:"Забронировать",
-
-regionsTitle:"Регионы трансфера на Кипре",
-
-regionsText:"Безопасные и комфортные трансферы во все основные регионы Кипра.",
-
-servicesTitle:"Наши услуги трансфера",
-
-servicesText:"Безопасные и профессиональные варианты трансфера.",
-
-airportTitle:"Трансфер из нового аэропорта Эрджан",
-
-airportText:"Частный трансфер из нового аэропорта Эрджан в Никосию, Кирению, Фамагусту, Искеле, Бафру, Лефке и Гюзельюрт.",
-
-privateTitle:"Частный трансфер",
-
-privateText:"Комфортная поездка на частном автомобиле с профессиональным водителем.",
-
-hotelTitle:"Трансфер в отель",
-
-hotelText:"Безопасная поездка из отеля в аэропорт или из аэропорта в ваш отель.",
-
-vipTitle:"VIP трансфер",
-
-vipText:"Комфортный трансфер для деловых поездок, особых мероприятий и VIP-клиентов.",
-
-bookingTitle:"Бронирование трансфера",
-
-bookingText:"Заполните данные и отправьте заявку через WhatsApp.",
-
-name:"Имя и фамилия",
-
-phone:"Телефон / WhatsApp",
-
-date:"Дата трансфера",
-
-time:"Время трансфера",
-
-pickup:"Место отправления",
-
-dropoff:"Место назначения / Отель",
-
-passengers:"Количество пассажиров",
-
-flight:"Номер рейса",
-
-message:"Дополнительная информация",
-
-sendBooking:"📲 Отправить заявку в WhatsApp",
-
-contactTitle:"Контакты",
-
-phoneTitle:"Телефон",
-
-locationTitle:"Местоположение",
-
-locationText:"Никосия, Северный Кипр • Новый аэропорт Эрджан",
-
-seoTitle:"Трансфер на Кипре",
-
-seo1:"Kıbrıs Nicosia Transfer предоставляет частные трансферы 24/7 из нового аэропорта Эрджан и аэропорта Ларнаки в Никосию, Кирению, Фамагусту, Искеле, Бафру, Лефке и Гюзельюрт.",
-
-seo2:"Мы предлагаем безопасные, комфортные и своевременные трансферы из аэропорта, в отели и между городами по всему Кипру.",
-
-seo3:"Забронируйте трансфер в Никосию, Кирению, Фамагусту, Искеле, Бафру, Лефке или Гюзельюрт через WhatsApp.",
-
-rights:"Все права защищены.",
-
-whatsappMessage:"Здравствуйте, я хочу забронировать трансфер на Кипре."
-
-},
-
-fr: {
-
-logo:"🚐 Transfert Nicosie Chypre",
-
-heroTitle:"Transfert Nicosie Chypre",
-
-heroText:"Service de transfert privé sûr, confortable et disponible 24h/24 et 7j/7 depuis le nouvel aéroport d'Ercan et partout à Chypre.",
-
-bookNow:"Réserver",
-
-regionsTitle:"Zones de transfert à Chypre",
-
-regionsText:"Transferts sûrs et confortables vers les principales régions de Chypre.",
-
-servicesTitle:"Nos services de transfert",
-
-servicesText:"Des solutions de transfert sûres et professionnelles.",
-
-airportTitle:"Transfert depuis le nouvel aéroport d'Ercan",
-
-airportText:"Transferts privés du nouvel aéroport d'Ercan vers Nicosie, Kyrenia, Famagouste, İskele, Bafra, Lefke et Güzelyurt.",
-
-privateTitle:"Transfert privé",
-
-privateText:"Transport confortable avec véhicule privé et chauffeur professionnel.",
-
-hotelTitle:"Transfert hôtel à Chypre",
-
-hotelText:"Transport sûr de votre hôtel vers l'aéroport ou de l'aéroport vers votre hôtel.",
-
-vipTitle:"Transfert VIP",
-
-vipText:"Transferts confortables pour voyages d'affaires, événements spéciaux et transport VIP.",
-
-bookingTitle:"Réservation de transfert",
-
-bookingText:"Remplissez vos informations et envoyez votre réservation via WhatsApp.",
-
-name:"Nom complet",
-
-phone:"Téléphone / WhatsApp",
-
-date:"Date du transfert",
-
-time:"Heure du transfert",
-
-pickup:"Lieu de prise en charge",
-
-dropoff:"Destination / Hôtel",
-
-passengers:"Nombre de passagers",
-
-flight:"Numéro de vol",
-
-message:"Informations supplémentaires",
-
-sendBooking:"📲 Envoyer la réservation par WhatsApp",
-
-contactTitle:"Contact",
-
-phoneTitle:"Téléphone",
-
-locationTitle:"Localisation",
-
-locationText:"Nicosie, Chypre du Nord • Nouvel aéroport d'Ercan",
-
-seoTitle:"Service de transfert à Chypre",
-
-seo1:"Kıbrıs Nicosia Transfer propose des transferts privés 24h/24 et 7j/7 depuis le nouvel aéroport d'Ercan et l'aéroport de Larnaca vers Nicosie, Kyrenia, Famagouste, İskele, Bafra, Lefke et Güzelyurt.",
-
-seo2:"Nous proposons des transferts aéroport, hôtel et interurbains sûrs, confortables et ponctuels dans toute l'île de Chypre.",
-
-seo3:"Réservez facilement votre transfert vers Nicosie, Kyrenia, Famagouste, İskele, Bafra, Lefke ou Güzelyurt via WhatsApp.",
-
-rights:"Tous droits réservés.",
-
-whatsappMessage:"Bonjour, je souhaite réserver un transfert à Chypre."
-
-}
-
-};
-
-
-/* DİL DEĞİŞTİRME */
-
-function changeLanguage(lang) {
-
-  document.documentElement.lang = lang;
-
-  document.querySelectorAll("[data-i18n]").forEach(element => {
-
-    const key = element.getAttribute("data-i18n");
-
-    if (
-      translations[lang] &&
-      translations[lang][key]
-    ) {
-
-      element.textContent =
-        translations[lang][key];
-
-    }
-
-  });
-
-  localStorage.setItem(
-    "selectedLanguage",
-    lang
-  );
-
-}
-
-
-/* WHATSAPP REZERVASYON */
-
-function sendWhatsApp(event) {
-
-  event.preventDefault();
-
-  const whatsappNumber =
-    "905391046030";
-
-  const lang =
-    localStorage.getItem("selectedLanguage") || "tr";
-
-  const t =
-    translations[lang];
-
-  const name =
-    document.getElementById("name").value;
-
-  const phone =
-    document.getElementById("phone").value;
-
-  const date =
-    document.getElementById("date").value;
-
-  const time =
-    document.getElementById("time").value;
-
-  const pickup =
-    document.getElementById("pickup").value;
-
-  const dropoff =
-    document.getElementById("dropoff").value;
-
-  const passengers =
-    document.getElementById("passengers").value;
-
-  const flight =
-    document.getElementById("flight").value;
-
-  const message =
-    document.getElementById("message").value;
-
-  const text =
-`${t.whatsappMessage}
-
-${t.name}: ${name}
-${t.phone}: ${phone}
-${t.date}: ${date}
-${t.time}: ${time}
-${t.pickup}: ${pickup}
-${t.dropoff}: ${dropoff}
-${t.passengers}: ${passengers}
-${t.flight}: ${flight}
-${t.message}: ${message}`;
-
-  const url =
-    "https://wa.me/" +
-    whatsappNumber +
-    "?text=" +
-    encodeURIComponent(text);
-
-  window.open(
-    url,
-    "_blank"
-  );
-
-}
-
-
-/* YIL */
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
-
-/* KAYITLI DİL */
-
-const savedLanguage =
-  localStorage.getItem("selectedLanguage") || "tr";
-
-document.getElementById(
-  "languageSelect"
-).value = savedLanguage;
-
-changeLanguage(
-  savedLanguage
-);
-
-</script>
-
-</body>
-</html>
+regionsTitle:"Cyprus             
