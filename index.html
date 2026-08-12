@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Kıbrıs Nicosia Transfer | Ercan Havalimanı Transfer | 7/24</title>
+<title>Kıbrıs Nicosia Transfer | Ercan Havalimanı & Otel Transfer | 7/24</title>
 
-<meta name="description" content="Kıbrıs Nicosia Transfer - Ercan ve Larnaka Havalimanı, Lefkoşa, Girne, Gazimağusa, Bafra ve İskele'ye 7/24 transfer hizmeti.">
+<meta name="description" content="Kıbrıs Nicosia Transfer. Ercan Havalimanı ve Kıbrıs otelleri arasında 7/24 güvenli ve konforlu transfer. Tek yön ve gidiş-dönüş fiyatlarını rezervasyon öncesi görün.">
 
-<meta name="keywords" content="Kıbrıs transfer, Nicosia transfer, Ercan transfer, Ercan havalimanı transfer, Kıbrıs havalimanı transfer, Girne transfer, Lefkoşa transfer">
+<meta name="keywords" content="Kıbrıs transfer, Ercan transfer, Ercan Havalimanı transfer, Kıbrıs otel transfer, Limak transfer, Concord Bafra transfer, Kaya Artemis transfer, Nuh'un Gemisi transfer, Acapulco transfer, Elexus transfer, Cratos transfer, Chamada transfer, Merit transfer">
 
 <style>
 
@@ -23,34 +23,33 @@ scroll-behavior:smooth;
 body{
 margin:0;
 font-family:Arial,Helvetica,sans-serif;
-background:#f4f7fb;
+background:#f3f6fa;
 color:#172033;
-line-height:1.5;
 }
 
 header{
 background:linear-gradient(135deg,#07152f,#155eef,#0ea5e9);
 color:white;
-padding:55px 20px;
 text-align:center;
+padding:50px 18px;
 }
 
 header h1{
-font-size:38px;
+font-size:36px;
 margin:0 0 12px;
 }
 
 header p{
+font-size:17px;
 margin:7px 0;
-font-size:18px;
 }
 
 .badge{
 display:inline-block;
-background:rgba(255,255,255,.15);
-padding:9px 16px;
-border-radius:50px;
 margin-top:15px;
+padding:9px 18px;
+border-radius:50px;
+background:rgba(255,255,255,.16);
 font-weight:bold;
 }
 
@@ -60,17 +59,17 @@ margin:30px auto;
 }
 
 .card{
-background:white;
+background:#fff;
 border-radius:20px;
 padding:28px;
-margin-bottom:25px;
+margin-bottom:24px;
 box-shadow:0 8px 30px rgba(15,23,42,.09);
 }
 
 .card h2{
-margin:0 0 20px;
-font-size:25px;
 color:#155eef;
+margin:0 0 22px;
+font-size:25px;
 }
 
 label{
@@ -83,10 +82,10 @@ select,
 input{
 width:100%;
 padding:15px;
-border:1px solid #ccd4e0;
+border:1px solid #ccd4df;
 border-radius:12px;
-background:#fff;
 font-size:16px;
+background:#fff;
 outline:none;
 }
 
@@ -96,27 +95,34 @@ border-color:#155eef;
 box-shadow:0 0 0 3px rgba(21,94,239,.12);
 }
 
-.trip-grid{
+.trip-buttons{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:12px;
 }
 
-.trip-option{
-border:2px solid #dbe2ea;
+.trip-button{
+border:2px solid #d9e1eb;
 border-radius:13px;
-padding:15px;
+padding:16px;
 text-align:center;
-cursor:pointer;
 font-weight:bold;
+cursor:pointer;
+background:#fff;
 }
 
-.trip-option input{
+.trip-button input{
 width:auto;
 margin-right:7px;
 }
 
-.info-grid{
+.trip-button:has(input:checked){
+border-color:#155eef;
+background:#eff6ff;
+color:#155eef;
+}
+
+.grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:15px;
@@ -124,10 +130,10 @@ gap:15px;
 
 .price-box{
 margin-top:25px;
+padding:25px;
+border-radius:18px;
 background:#eff6ff;
 border:2px solid #2563eb;
-border-radius:18px;
-padding:25px;
 text-align:center;
 }
 
@@ -140,13 +146,13 @@ color:#64748b;
 font-size:40px;
 font-weight:800;
 color:#155eef;
-margin-top:4px;
+margin-top:5px;
 }
 
-.price-message{
-margin-top:7px;
+.price-info{
 font-size:14px;
 color:#64748b;
+margin-top:7px;
 }
 
 .summary{
@@ -155,29 +161,35 @@ padding:20px;
 border-radius:15px;
 background:#f8fafc;
 border:1px solid #e2e8f0;
+line-height:1.8;
 }
 
 .summary-title{
 font-size:19px;
 font-weight:bold;
-margin-bottom:10px;
 color:#155eef;
+margin-bottom:10px;
 }
 
-.summary-row{
-padding:5px 0;
-}
-
-.total-row{
+.total{
+border-top:1px solid #dbe2ea;
 margin-top:12px;
 padding-top:12px;
-border-top:1px solid #dbe2ea;
-font-size:19px;
+font-size:20px;
 font-weight:bold;
 }
 
+.warning{
+display:none;
+margin-top:15px;
+padding:14px;
+border-radius:12px;
+background:#fff7ed;
+border:1px solid #fed7aa;
+color:#9a3412;
+}
+
 .whatsapp{
-display:block;
 width:100%;
 margin-top:22px;
 padding:18px;
@@ -188,26 +200,10 @@ color:white;
 font-size:19px;
 font-weight:bold;
 cursor:pointer;
-text-decoration:none;
-text-align:center;
 }
 
 .whatsapp:hover{
 background:#1ebe5d;
-}
-
-.whatsapp:active{
-transform:scale(.99);
-}
-
-.warning{
-display:none;
-margin-top:15px;
-padding:14px;
-background:#fff7ed;
-border:1px solid #fed7aa;
-border-radius:12px;
-color:#9a3412;
 }
 
 .services{
@@ -219,13 +215,9 @@ gap:12px;
 .service{
 background:#f8fafc;
 border:1px solid #e2e8f0;
-padding:16px;
-border-radius:13px;
+padding:15px;
+border-radius:12px;
 font-weight:bold;
-}
-
-.about{
-font-size:16px;
 }
 
 footer{
@@ -236,32 +228,18 @@ padding:30px 15px;
 margin-top:30px;
 }
 
-.footer-title{
-font-size:21px;
-font-weight:bold;
-margin-bottom:8px;
-}
-
 @media(max-width:600px){
-
-header{
-padding:40px 15px;
-}
 
 header h1{
 font-size:29px;
-}
-
-header p{
-font-size:15px;
 }
 
 .card{
 padding:20px;
 }
 
-.trip-grid,
-.info-grid,
+.grid,
+.trip-buttons,
 .services{
 grid-template-columns:1fr;
 }
@@ -275,15 +253,19 @@ font-size:34px;
 </style>
 </head>
 
+
 <body>
+
 
 <header>
 
 <h1>🚐 Kıbrıs Nicosia Transfer</h1>
 
-<p>7/24 Havalimanı & Otel Transfer Hizmeti</p>
+<p>7/24 Havalimanı & Otel Transfer</p>
 
-<p>Ercan • Larnaka • Lefkoşa • Girne • Gazimağusa • Bafra • İskele</p>
+<p>
+Ercan • Lefkoşa • Girne • Mağusa • İskele • Bafra
+</p>
 
 <div class="badge">
 ⭐ Güvenli • Konforlu • 7/24
@@ -295,9 +277,10 @@ font-size:34px;
 <main class="container">
 
 
-<section class="card" id="booking">
+<section class="card">
 
 <h2>🚕 Transfer Rezervasyonu</h2>
+
 
 <label for="from">
 📍 Alış Noktası
@@ -306,35 +289,87 @@ font-size:34px;
 <select id="from">
 
 <option value="">
-Alış noktası seçiniz
+Alış noktasını seçiniz
 </option>
 
 <option value="Ercan Havalimanı">
 Ercan Havalimanı
 </option>
 
-<option value="Larnaka Havalimanı">
-Larnaka Havalimanı
+<option value="Limak Otel">
+Limak Otel
+</option>
+
+<option value="Concord Bafra">
+Concord Bafra
+</option>
+
+<option value="Kaya Artemis">
+Kaya Artemis
+</option>
+
+<option value="Nuh'un Gemisi">
+Nuh'un Gemisi
+</option>
+
+<option value="Arkın İskele">
+Arkın İskele
+</option>
+
+<option value="Merit Garden">
+Merit Garden
+</option>
+
+<option value="Grand Sapphire">
+Grand Sapphire
+</option>
+
+<option value="Salamis Bay Conti">
+Salamis Bay Conti
+</option>
+
+<option value="Mağusa Otelleri">
+Mağusa Otelleri
 </option>
 
 <option value="Lefkoşa">
 Lefkoşa
 </option>
 
-<option value="Girne">
-Girne
+<option value="Gönyeli">
+Gönyeli
 </option>
 
-<option value="Gazimağusa">
-Gazimağusa
+<option value="Girne Merkez">
+Girne Merkez
 </option>
 
-<option value="Bafra">
-Bafra
+<option value="Acapulco Otel">
+Acapulco Otel
 </option>
 
-<option value="İskele">
-İskele
+<option value="Elexus">
+Elexus
+</option>
+
+<option value="Cratos Otel">
+Cratos Otel
+</option>
+
+<option value="Chamada Otel">
+Chamada Otel
+</option>
+
+<option value="Merit Park">
+Merit Park
+</option>
+
+<option value="Merit Royal">
+Merit Royal
+</option>
+
+<option value="Esentepe">
+Esentepe
 </option>
 
 </select>
@@ -354,28 +389,80 @@ Gidilecek yeri seçiniz
 Ercan Havalimanı
 </option>
 
-<option value="Larnaka Havalimanı">
-Larnaka Havalimanı
+<option value="Limak Otel">
+Limak Otel
+</option>
+
+<option value="Concord Bafra">
+Concord Bafra
+</option>
+
+<option value="Kaya Artemis">
+Kaya Artemis
+</option>
+
+<option value="Nuh'un Gemisi">
+Nuh'un Gemisi
+</option>
+
+<option value="Arkın İskele">
+Arkın İskele
+</option>
+
+<option value="Merit Garden">
+Merit Garden
+</option>
+
+<option value="Grand Sapphire">
+Grand Sapphire
+</option>
+
+<option value="Salamis Bay Conti">
+Salamis Bay Conti
+</option>
+
+<option value="Mağusa Otelleri">
+Mağusa Otelleri
 </option>
 
 <option value="Lefkoşa">
 Lefkoşa
 </option>
 
-<option value="Girne">
-Girne
+<option value="Gönyeli">
+Gönyeli
 </option>
 
-<option value="Gazimağusa">
-Gazimağusa
+<option value="Girne Merkez">
+Girne Merkez
 </option>
 
-<option value="Bafra">
-Bafra
+<option value="Acapulco Otel">
+Acapulco Otel
 </option>
 
-<option value="İskele">
-İskele
+<option value="Elexus">
+Elexus
+</option>
+
+<option value="Cratos Otel">
+Cratos Otel
+</option>
+
+<option value="Chamada Otel">
+Chamada Otel
+</option>
+
+<option value="Merit Park">
+Merit Park
+</option>
+
+<option value="Merit Royal">
+Merit Royal
+</option>
+
+<option value="Esentepe">
+Esentepe
 </option>
 
 </select>
@@ -385,9 +472,9 @@ Bafra
 🔄 Transfer Tipi
 </label>
 
-<div class="trip-grid">
+<div class="trip-buttons">
 
-<label class="trip-option">
+<label class="trip-button">
 
 <input
 type="radio"
@@ -401,7 +488,7 @@ Tek Yön
 </label>
 
 
-<label class="trip-option">
+<label class="trip-button">
 
 <input
 type="radio"
@@ -416,12 +503,12 @@ Gidiş - Dönüş
 </div>
 
 
-<div class="info-grid">
+<div class="grid">
 
 <div>
 
 <label for="date">
-📅 Tarih
+📅 Transfer Tarihi
 </label>
 
 <input
@@ -435,7 +522,7 @@ id="date"
 <div>
 
 <label for="time">
-🕐 Saat
+🕐 Transfer Saati
 </label>
 
 <input
@@ -471,7 +558,7 @@ id="time"
 <div class="price-box">
 
 <div class="price-label">
-💰 Ödenecek Transfer Ücreti
+💰 ÖDEYECEĞİNİZ TOPLAM TRANSFER ÜCRETİ
 </div>
 
 <div
@@ -482,10 +569,10 @@ id="price"
 </div>
 
 <div
-class="price-message"
-id="priceMessage"
+class="price-info"
+id="priceInfo"
 >
-Güzergâhınızı seçtiğinizde fiyat otomatik olarak gösterilir.
+Alış ve gidilecek yeri seçtiğinizde fiyat burada otomatik görünür.
 </div>
 
 </div>
@@ -501,7 +588,7 @@ id="summary"
 </div>
 
 <div>
-Lütfen alış ve gidilecek yeri seçiniz.
+Lütfen güzergâhınızı seçiniz.
 </div>
 
 </div>
@@ -515,11 +602,13 @@ id="warning"
 
 
 <button
-type="button"
 class="whatsapp"
+type="button"
 onclick="sendWhatsApp()"
 >
+
 📲 WhatsApp'tan Rezervasyon Gönder
+
 </button>
 
 
@@ -528,40 +617,84 @@ onclick="sendWhatsApp()"
 
 <section class="card">
 
-<h2>📍 Hizmet Bölgelerimiz</h2>
+<h2>🏨 Transfer Fiyatlarımız</h2>
 
 <div class="services">
 
 <div class="service">
-✈️ Ercan Havalimanı
+✈️ Ercan → Limak: 4.750 TL
 </div>
 
 <div class="service">
-✈️ Larnaka Havalimanı
+✈️ Ercan → Concord Bafra: 4.800 TL
 </div>
 
 <div class="service">
-🏙️ Lefkoşa
+✈️ Ercan → Kaya Artemis: 4.750 TL
 </div>
 
 <div class="service">
-🌊 Girne
+✈️ Ercan → Nuh'un Gemisi: 4.800 TL
 </div>
 
 <div class="service">
-🏖️ Gazimağusa
+✈️ Ercan → Arkın İskele: 4.000 TL
 </div>
 
 <div class="service">
-🏨 Bafra
+✈️ Ercan → Merit Garden: 4.000 TL
 </div>
 
 <div class="service">
-🌴 İskele
+✈️ Ercan → Grand Sapphire: 4.000 TL
 </div>
 
 <div class="service">
-🏨 Kıbrıs Otelleri
+✈️ Ercan → Salamis Bay Conti: 3.750 TL
+</div>
+
+<div class="service">
+✈️ Ercan → Mağusa Otelleri: 3.500 TL
+</div>
+
+<div class="service">
+✈️ Ercan → Lefkoşa: 2.600 TL
+</div>
+
+<div class="service">
+✈️ Ercan → Gönyeli: 2.800 TL
+</div>
+
+<div class="service">
+✈️ Ercan → Girne Merkez: 3.600 TL
+</div>
+
+<div class="service">
+✈️ Ercan → Acapulco: 3.000 TL
+</div>
+
+<div class="service">
+✈️ Ercan → Elexus: 3.250 TL
+</div>
+
+<div class="service">
+✈️ Ercan → Cratos: 3.300 TL
+</div>
+
+<div class="service">
+✈️ Ercan → Chamada: 3.300 TL
+</div>
+
+<div class="service">
+✈️ Ercan → Merit Park: 4.000 TL
+</div>
+
+<div class="service">
+✈️ Ercan → Merit Royal: 4.500 TL
+</div>
+
+<div class="service">
+✈️ Ercan → Esentepe: 4.000 TL
 </div>
 
 </div>
@@ -569,24 +702,24 @@ onclick="sendWhatsApp()"
 </section>
 
 
-<section class="card about">
+<section class="card">
 
 <h2>⭐ Kıbrıs Nicosia Transfer</h2>
 
 <p>
-Kıbrıs genelindeki havalimanı, otel ve şehirlerarası
-transfer ihtiyaçlarınız için 7/24 hizmet sunuyoruz.
+Kıbrıs genelinde havalimanı ve otel transfer hizmeti
+7/24 sunulmaktadır.
 </p>
 
 <p>
-Ercan ve Larnaka Havalimanlarından Lefkoşa, Girne,
-Gazimağusa, Bafra, İskele ve Kıbrıs'ın birçok noktasına
-güvenli ve konforlu transfer hizmeti.
+Misafirlerimiz rezervasyon yapmadan önce
+<strong>tek yön veya gidiş-dönüş toplam ücretini
+ekranda görebilir.</strong>
 </p>
 
 <p>
-Rezervasyon formundan güzergâhınızı seçtiğinizde
-<strong>ödenecek toplam ücret ekranda anında gösterilir.</strong>
+Rezervasyon bilgileri WhatsApp üzerinden
+otomatik olarak gönderilebilir.
 </p>
 
 </section>
@@ -597,153 +730,74 @@ Rezervasyon formundan güzergâhınızı seçtiğinizde
 
 <footer>
 
-<div class="footer-title">
-Kıbrıs Nicosia Transfer
-</div>
+<strong>Kıbrıs Nicosia Transfer</strong>
 
-<div>
+<br>
+
 7/24 Havalimanı & Otel Transfer
-</div>
 
-<div style="margin-top:10px;">
-📲 WhatsApp: +90 539 104 60 30
-</div>
+<br><br>
+
+📲 WhatsApp:
++90 539 104 60 30
 
 </footer>
 
 
+
 <script>
 
-/* ==================================================
-   TRANSFER FİYAT TABLOSU
-   ================================================== */
+
+/* =====================================================
+   FİYAT LİSTESİ
+   ===================================================== */
 
 const prices = {
 
-"Ercan Havalimanı": {
+"Limak Otel":4750,
 
-"Lefkoşa":1000,
+"Concord Bafra":4800,
 
-"Girne":1500,
+"Kaya Artemis":4750,
 
-"Gazimağusa":1600,
+"Nuh'un Gemisi":4800,
 
-"Bafra":1900,
+"Arkın İskele":4000,
 
-"İskele":1800,
+"Merit Garden":4000,
 
-"Larnaka Havalimanı":4500
+"Grand Sapphire":4000,
 
-},
+"Salamis Bay Conti":3750,
 
+"Mağusa Otelleri":3500,
 
-"Larnaka Havalimanı": {
+"Lefkoşa":2600,
 
-"Lefkoşa":4500,
+"Gönyeli":2800,
 
-"Girne":5500,
+"Girne Merkez":3600,
 
-"Gazimağusa":5000,
+"Acapulco Otel":3000,
 
-"Bafra":5500,
+"Elexus":3250,
 
-"İskele":5200,
+"Cratos Otel":3300,
 
-"Ercan Havalimanı":4500
+"Chamada Otel":3300,
 
-},
+"Merit Park":4000,
 
+"Merit Royal":4500,
 
-"Lefkoşa": {
-
-"Ercan Havalimanı":1000,
-
-"Girne":1500,
-
-"Gazimağusa":1700,
-
-"Bafra":2100,
-
-"İskele":1900,
-
-"Larnaka Havalimanı":4500
-
-},
-
-
-"Girne": {
-
-"Ercan Havalimanı":1500,
-
-"Lefkoşa":1500,
-
-"Gazimağusa":2500,
-
-"Bafra":3000,
-
-"İskele":2800,
-
-"Larnaka Havalimanı":5500
-
-},
-
-
-"Gazimağusa": {
-
-"Ercan Havalimanı":1600,
-
-"Lefkoşa":1700,
-
-"Girne":2500,
-
-"Bafra":2200,
-
-"İskele":1500,
-
-"Larnaka Havalimanı":5000
-
-},
-
-
-"Bafra": {
-
-"Ercan Havalimanı":1900,
-
-"Lefkoşa":2100,
-
-"Girne":3000,
-
-"Gazimağusa":2200,
-
-"İskele":1500,
-
-"Larnaka Havalimanı":5500
-
-},
-
-
-"İskele": {
-
-"Ercan Havalimanı":1800,
-
-"Lefkoşa":1900,
-
-"Girne":2800,
-
-"Gazimağusa":1500,
-
-"Bafra":1500,
-
-"Larnaka Havalimanı":5200
-
-}
+"Esentepe":4000
 
 };
 
 
-/* ==================================================
-   HTML ELEMENTLERİ
-   ================================================== */
+/* =====================================================
+   ELEMENTLER
+   ===================================================== */
 
 const fromEl =
 document.getElementById("from");
@@ -763,8 +817,8 @@ document.getElementById("passengers");
 const priceEl =
 document.getElementById("price");
 
-const priceMessageEl =
-document.getElementById("priceMessage");
+const priceInfoEl =
+document.getElementById("priceInfo");
 
 const summaryEl =
 document.getElementById("summary");
@@ -773,9 +827,9 @@ const warningEl =
 document.getElementById("warning");
 
 
-/* ==================================================
-   TARİHİ BUGÜNÜN TARİHİNDEN ÖNCE SEÇTİRME
-   ================================================== */
+/* =====================================================
+   BUGÜNDEN ÖNCE TARİH SEÇİLMESİN
+   ===================================================== */
 
 const today =
 new Date().toISOString().split("T")[0];
@@ -783,9 +837,55 @@ new Date().toISOString().split("T")[0];
 dateEl.min=today;
 
 
-/* ==================================================
-   FİYAT HESAPLAMA
-   ================================================== */
+/* =====================================================
+   BAZ FİYATI BUL
+   ===================================================== */
+
+function getBasePrice(from,to){
+
+/*
+   Ercan → Otel
+   */
+
+if(
+from==="Ercan Havalimanı" &&
+prices[to] !== undefined
+){
+
+return prices[to];
+
+}
+
+
+/*
+   Otel → Ercan
+
+   Gidiş dönüş mantığında aynı fiyat kullanılır.
+   */
+
+if(
+to==="Ercan Havalimanı" &&
+prices[from] !== undefined
+){
+
+return prices[from];
+
+}
+
+
+/*
+   Otel → Aynı otel veya
+   Ercan dışındaki otel güzergâhları
+   */
+
+return 0;
+
+}
+
+
+/* =====================================================
+   FİYAT HESAPLA
+   ===================================================== */
 
 function calculatePrice(){
 
@@ -800,8 +900,8 @@ if(!from || !to){
 
 priceEl.textContent="—";
 
-priceMessageEl.textContent=
-"Güzergâhınızı seçtiğinizde fiyat otomatik olarak gösterilir.";
+priceInfoEl.textContent=
+"Alış ve gidilecek yeri seçtiğinizde fiyat otomatik görünür.";
 
 summaryEl.innerHTML=`
 
@@ -824,7 +924,7 @@ if(from===to){
 
 priceEl.textContent="—";
 
-priceMessageEl.textContent=
+priceInfoEl.textContent=
 "Alış ve gidilecek yer aynı olamaz.";
 
 summaryEl.innerHTML=`
@@ -844,23 +944,32 @@ return 0;
 }
 
 
-if(
-!prices[from] ||
-prices[from][to] === undefined
-){
+const basePrice =
+getBasePrice(from,to);
 
-priceEl.textContent="Bilgi alınız";
 
-priceMessageEl.textContent=
-"Bu güzergâh için fiyat bilgisi bulunamadı.";
+if(!basePrice){
+
+priceEl.textContent="Bilgi Alınız";
+
+priceInfoEl.textContent=
+"Bu güzergâh için fiyat listesi bulunmamaktadır.";
+
+summaryEl.innerHTML=`
+
+<div class="summary-title">
+ℹ️ Fiyat Bilgisi
+</div>
+
+<div>
+Bu güzergâh için henüz fiyat tanımlanmamıştır.
+</div>
+
+`;
 
 return 0;
 
 }
-
-
-const oneWay =
-prices[from][to];
 
 
 const trip =
@@ -870,37 +979,40 @@ document.querySelector(
 
 
 let total =
-oneWay;
+basePrice;
 
 
 if(trip==="round"){
 
 total =
-oneWay * 2;
+basePrice * 2;
 
 }
 
 
-const formatted =
-total.toLocaleString(
-"tr-TR"
-);
-
-
 priceEl.textContent =
-formatted + " TL";
+total.toLocaleString("tr-TR") +
+" TL";
 
 
-priceMessageEl.textContent =
-trip==="round"
-? "Gidiş-dönüş toplam ücret"
-: "Tek yön toplam ücret";
+if(trip==="round"){
+
+priceInfoEl.textContent =
+"Gidiş-dönüş toplam ödenecek ücret";
+
+}else{
+
+priceInfoEl.textContent =
+"Tek yön toplam ödenecek ücret";
+
+}
 
 
 updateSummary(
 from,
 to,
 trip,
+basePrice,
 total
 );
 
@@ -910,14 +1022,15 @@ return total;
 }
 
 
-/* ==================================================
-   REZERVASYON ÖZETİ
-   ================================================== */
+/* =====================================================
+   ÖZET
+   ===================================================== */
 
 function updateSummary(
 from,
 to,
 trip,
+basePrice,
 total
 ){
 
@@ -925,15 +1038,12 @@ const date =
 dateEl.value ||
 "Belirtilmedi";
 
-
 const time =
 timeEl.value ||
 "Belirtilmedi";
 
-
 const passengers =
 passengersEl.value;
-
 
 const tripText =
 trip==="round"
@@ -947,31 +1057,36 @@ summaryEl.innerHTML=`
 📋 Rezervasyon Özeti
 </div>
 
-<div class="summary-row">
+<div>
 🚕 <strong>Alış:</strong> ${from}
 </div>
 
-<div class="summary-row">
-📍 <strong>Gidilecek Yer:</strong> ${to}
+<div>
+📍 <strong>Gidilecek:</strong> ${to}
 </div>
 
-<div class="summary-row">
+<div>
 🔄 <strong>Transfer:</strong> ${tripText}
 </div>
 
-<div class="summary-row">
+<div>
 📅 <strong>Tarih:</strong> ${date}
 </div>
 
-<div class="summary-row">
+<div>
 🕐 <strong>Saat:</strong> ${time}
 </div>
 
-<div class="summary-row">
+<div>
 👥 <strong>Yolcu:</strong> ${passengers} kişi
 </div>
 
-<div class="total-row">
+<div>
+💵 <strong>Tek yön fiyatı:</strong>
+${basePrice.toLocaleString("tr-TR")} TL
+</div>
+
+<div class="total">
 💰 ÖDENECEK TOPLAM:
 ${total.toLocaleString("tr-TR")} TL
 </div>
@@ -981,9 +1096,31 @@ ${total.toLocaleString("tr-TR")} TL
 }
 
 
-/* ==================================================
+/* =====================================================
+   UYARI
+   ===================================================== */
+
+function showWarning(text){
+
+warningEl.textContent =
+text;
+
+warningEl.style.display =
+"block";
+
+setTimeout(function(){
+
+warningEl.style.display =
+"none";
+
+},4000);
+
+}
+
+
+/* =====================================================
    WHATSAPP
-   ================================================== */
+   ===================================================== */
 
 function sendWhatsApp(){
 
@@ -1023,7 +1160,7 @@ calculatePrice();
 if(!total){
 
 showWarning(
-"Transfer ücreti hesaplanamadı."
+"Bu güzergâh için fiyat hesaplanamadı."
 );
 
 return;
@@ -1035,21 +1172,17 @@ const date =
 dateEl.value ||
 "Belirtilmedi";
 
-
 const time =
 timeEl.value ||
 "Belirtilmedi";
 
-
 const passengers =
 passengersEl.value;
-
 
 const trip =
 document.querySelector(
 'input[name="trip"]:checked'
 ).value;
-
 
 const tripText =
 trip==="round"
@@ -1062,19 +1195,26 @@ const message =
 
 🚕 YENİ TRANSFER REZERVASYONU
 
-📍 Alış: ${from}
+📍 Alış Noktası:
+${from}
 
-🏨 Gidilecek Yer: ${to}
+🏨 Gidilecek Yer:
+${to}
 
-🔄 Transfer: ${tripText}
+🔄 Transfer Tipi:
+${tripText}
 
-📅 Tarih: ${date}
+📅 Tarih:
+${date}
 
-🕐 Saat: ${time}
+🕐 Saat:
+${time}
 
-👥 Yolcu: ${passengers} kişi
+👥 Yolcu:
+${passengers} kişi
 
-💰 ÖDENECEK TOPLAM: ${total.toLocaleString("tr-TR")} TL
+💰 ÖDENECEK TOPLAM:
+${total.toLocaleString("tr-TR")} TL
 
 Rezervasyonumu onaylamak istiyorum.`;
 
@@ -1104,32 +1244,9 @@ whatsappURL;
 }
 
 
-/* ==================================================
-   UYARI
-   ================================================== */
-
-function showWarning(message){
-
-warningEl.textContent =
-message;
-
-warningEl.style.display =
-"block";
-
-
-setTimeout(function(){
-
-warningEl.style.display =
-"none";
-
-},4000);
-
-}
-
-
-/* ==================================================
-   OTOMATİK FİYAT GÜNCELLEME
-   ================================================== */
+/* =====================================================
+   OTOMATİK GÜNCELLEME
+   ===================================================== */
 
 fromEl.addEventListener(
 "change",
@@ -1171,13 +1288,14 @@ calculatePrice
 });
 
 
-/* ==================================================
-   İLK YÜKLEME
-   ================================================== */
+/* =====================================================
+   İLK ÇALIŞTIRMA
+   ===================================================== */
 
 calculatePrice();
 
 </script>
 
+
 </body>
-   </html>
+</html>
