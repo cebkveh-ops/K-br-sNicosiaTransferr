@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8"> 
-<meta name="yandex-verification" content="163dc42ace2d3bd4" />
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Kıbrıs Nicosia Transfer | Ercan Havalimanı Otel Transfer | 7/24</title>
 
 <meta name="description" content="Kıbrıs Nicosia Transfer - Ercan Havalimanı ve Kıbrıs otelleri arasında 7/24 güvenli ve konforlu transfer.">
+
+<!-- FACEBOOK / WHATSAPP -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:url" content="https://cebkveh-ops.github.io/KibrisNicosiaTransferr/">
+<meta property="og:title" content="Kıbrıs Nicosia Transfer | Ercan Havalimanı Otel Transfer | 7/24">
+<meta property="og:description" content="Ercan Havalimanı ve Kıbrıs genelinde 7/24 güvenli ve konforlu transfer. Lefkoşa, Girne, Mağusa, İskele ve Bafra.">
+
+<meta property="og:image" content="https://cebkveh-ops.github.io/KibrisNicosiaTransferr/transfer-facebook.jpg">
+<meta property="og:image:secure_url" content="https://cebkveh-ops.github.io/KibrisNicosiaTransferr/transfer-facebook.jpg">
+<meta property="og:image:url" content="https://cebkveh-ops.github.io/KibrisNicosiaTransferr/transfer-facebook.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kıbrıs Nicosia Transfer - Ercan Havalimanı ve Otel Transfer">
+
+<!-- TWITTER / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kıbrıs Nicosia Transfer | 7/24">
+<meta name="twitter:description" content="Ercan Havalimanı ve Kıbrıs genelinde 7/24 transfer hizmeti.">
+<meta name="twitter:image" content="https://cebkveh-ops.github.io/KibrisNicosiaTransferr/transfer-facebook.jpg">
 
 <style>
 *{box-sizing:border-box}
@@ -368,8 +388,6 @@ Gidiş - Dönüş
 
 </select>
 
-<!-- MİSAFİR BİLGİLERİ -->
-
 <h2 style="margin-top:28px;">👤 Misafir Bilgileri</h2>
 
 <label for="guestName">Adınız</label>
@@ -510,10 +528,6 @@ Gidiş-dönüş seçildiğinde aynı fiyatın iki katı otomatik hesaplanır.
 
 <script>
 
-/* =====================================================
-   SENİN VERDİĞİN FİYATLAR
-   ===================================================== */
-
 const prices = {
 
 "Limak Otel":4750,
@@ -538,188 +552,108 @@ const prices = {
 
 };
 
+const fromEl=document.getElementById("from");
+const toEl=document.getElementById("to");
+const dateEl=document.getElementById("date");
+const timeEl=document.getElementById("time");
+const passengersEl=document.getElementById("passengers");
+const guestNameEl=document.getElementById("guestName");
+const guestSurnameEl=document.getElementById("guestSurname");
+const guestPhoneEl=document.getElementById("guestPhone");
+const priceEl=document.getElementById("price");
+const priceInfoEl=document.getElementById("priceInfo");
+const summaryEl=document.getElementById("summary");
+const warningEl=document.getElementById("warning");
 
-/* =====================================================
-   ELEMENTLER
-   ===================================================== */
-
-const fromEl =
-document.getElementById("from");
-
-const toEl =
-document.getElementById("to");
-
-const dateEl =
-document.getElementById("date");
-
-const timeEl =
-document.getElementById("time");
-
-const passengersEl =
-document.getElementById("passengers");
-
-const guestNameEl =
-document.getElementById("guestName");
-
-const guestSurnameEl =
-document.getElementById("guestSurname");
-
-const guestPhoneEl =
-document.getElementById("guestPhone");
-
-const priceEl =
-document.getElementById("price");
-
-const priceInfoEl =
-document.getElementById("priceInfo");
-
-const summaryEl =
-document.getElementById("summary");
-
-const warningEl =
-document.getElementById("warning");
-
-
-/* =====================================================
-   BUGÜNDEN ÖNCE TARİH SEÇİLMESİN
-   ===================================================== */
-
-dateEl.min =
-new Date().toISOString().split("T")[0];
-
-
-/* =====================================================
-   BAZ FİYATI BUL
-   ===================================================== */
+dateEl.min=new Date().toISOString().split("T")[0];
 
 function getBasePrice(from,to){
 
 if(
-from === "Ercan Havalimanı" &&
+from==="Ercan Havalimanı" &&
 Object.prototype.hasOwnProperty.call(prices,to)
 ){
-
 return prices[to];
-
 }
 
 if(
-to === "Ercan Havalimanı" &&
+to==="Ercan Havalimanı" &&
 Object.prototype.hasOwnProperty.call(prices,from)
 ){
-
 return prices[from];
-
 }
 
 return 0;
-
 }
-
-
-/* =====================================================
-   FİYAT HESAPLA
-   ===================================================== */
 
 function calculatePrice(){
 
-const from =
-fromEl.value;
-
-const to =
-toEl.value;
+const from=fromEl.value;
+const to=toEl.value;
 
 if(!from || !to){
 
-priceEl.textContent =
-"—";
+priceEl.textContent="—";
 
-priceInfoEl.textContent =
+priceInfoEl.textContent=
 "Güzergâh seçtiğinizde fiyat burada otomatik görünür.";
 
-summaryEl.innerHTML = `
-
+summaryEl.innerHTML=`
 <div class="summary-title">
 📋 Rezervasyon Özeti
 </div>
-
 <div>
 Lütfen alış ve gidilecek yeri seçiniz.
 </div>
-
 `;
 
 return 0;
-
 }
 
-if(from === to){
+if(from===to){
 
-priceEl.textContent =
-"—";
+priceEl.textContent="—";
 
-priceInfoEl.textContent =
+priceInfoEl.textContent=
 "Alış ve gidilecek yer aynı olamaz.";
 
 return 0;
-
 }
 
-const basePrice =
-getBasePrice(from,to);
+const basePrice=getBasePrice(from,to);
 
 if(!basePrice){
 
-priceEl.textContent =
-"—";
+priceEl.textContent="—";
 
-priceInfoEl.textContent =
+priceInfoEl.textContent=
 "Bu güzergâh için fiyat listesi bulunmamaktadır.";
 
 return 0;
-
 }
 
-const trip =
-document.querySelector(
+const trip=document.querySelector(
 'input[name="trip"]:checked'
 ).value;
 
-let total =
-basePrice;
+let total=basePrice;
 
-if(trip === "round"){
-
-total =
-basePrice * 2;
-
+if(trip==="round"){
+total=basePrice*2;
 }
 
-priceEl.textContent =
-total.toLocaleString("tr-TR") +
-" TL";
+priceEl.textContent=
+total.toLocaleString("tr-TR")+" TL";
 
-priceInfoEl.textContent =
-trip === "round"
-? "Gidiş-dönüş toplam ödenecek ücret"
-: "Tek yön toplam ödenecek ücret";
+priceInfoEl.textContent=
+trip==="round"
+?"Gidiş-dönüş toplam ödenecek ücret"
+:"Tek yön toplam ödenecek ücret";
 
-updateSummary(
-from,
-to,
-trip,
-basePrice,
-total
-);
+updateSummary(from,to,trip,basePrice,total);
 
 return total;
-
 }
-
-
-/* =====================================================
-   REZERVASYON ÖZETİ
-   ===================================================== */
 
 function updateSummary(
 from,
@@ -729,35 +663,25 @@ basePrice,
 total
 ){
 
-const date =
-dateEl.value ||
-"Belirtilmedi";
+const date=dateEl.value||"Belirtilmedi";
+const time=timeEl.value||"Belirtilmedi";
+const passengers=passengersEl.value;
 
-const time =
-timeEl.value ||
-"Belirtilmedi";
+const guestName=
+guestNameEl.value.trim()||"Belirtilmedi";
 
-const passengers =
-passengersEl.value;
+const guestSurname=
+guestSurnameEl.value.trim()||"Belirtilmedi";
 
-const guestName =
-guestNameEl.value.trim() ||
-"Belirtilmedi";
+const guestPhone=
+guestPhoneEl.value.trim()||"Belirtilmedi";
 
-const guestSurname =
-guestSurnameEl.value.trim() ||
-"Belirtilmedi";
+const tripText=
+trip==="round"
+?"Gidiş - Dönüş"
+:"Tek Yön";
 
-const guestPhone =
-guestPhoneEl.value.trim() ||
-"Belirtilmedi";
-
-const tripText =
-trip === "round"
-? "Gidiş - Dönüş"
-: "Tek Yön";
-
-summaryEl.innerHTML = `
+summaryEl.innerHTML=`
 
 <div class="summary-title">
 📋 Rezervasyon Özeti
@@ -814,86 +738,53 @@ ${total.toLocaleString("tr-TR")} TL
 </div>
 
 `;
-
 }
-
-
-/* =====================================================
-   UYARI
-   ===================================================== */
 
 function showWarning(message){
 
-warningEl.textContent =
-message;
-
-warningEl.style.display =
-"block";
+warningEl.textContent=message;
+warningEl.style.display="block";
 
 setTimeout(function(){
-
-warningEl.style.display =
-"none";
-
+warningEl.style.display="none";
 },4000);
 
 }
 
-
-/* =====================================================
-   WHATSAPP REZERVASYON
-   ===================================================== */
-
 function sendWhatsApp(){
 
-const from =
-fromEl.value;
+const from=fromEl.value;
+const to=toEl.value;
 
-const to =
-toEl.value;
-
-const guestName =
+const guestName=
 guestNameEl.value.trim();
 
-const guestSurname =
+const guestSurname=
 guestSurnameEl.value.trim();
 
-const guestPhone =
+const guestPhone=
 guestPhoneEl.value.trim();
-
 
 if(!guestName){
 
-showWarning(
-"Lütfen misafir adını giriniz."
-);
-
+showWarning("Lütfen misafir adını giriniz.");
 guestNameEl.focus();
-
 return;
 
 }
 
 if(!guestSurname){
 
-showWarning(
-"Lütfen misafir soyadını giriniz."
-);
-
+showWarning("Lütfen misafir soyadını giriniz.");
 guestSurnameEl.focus();
-
 return;
 
 }
 
 if(!guestPhone){
 
-showWarning(
-"Lütfen iletişim telefon numarasını giriniz."
-);
-
+showWarning("Lütfen iletişim telefon numarasını giriniz.");
 guestPhoneEl.focus();
-
 return;
 
 }
@@ -905,21 +796,18 @@ showWarning(
 );
 
 return;
-
 }
 
-if(from === to){
+if(from===to){
 
 showWarning(
 "Alış noktası ve gidilecek yer aynı olamaz."
 );
 
 return;
-
 }
 
-const total =
-calculatePrice();
+const total=calculatePrice();
 
 if(!total){
 
@@ -928,32 +816,22 @@ showWarning(
 );
 
 return;
-
 }
 
-const date =
-dateEl.value ||
-"Belirtilmedi";
+const date=dateEl.value||"Belirtilmedi";
+const time=timeEl.value||"Belirtilmedi";
+const passengers=passengersEl.value;
 
-const time =
-timeEl.value ||
-"Belirtilmedi";
-
-const passengers =
-passengersEl.value;
-
-const trip =
-document.querySelector(
+const trip=document.querySelector(
 'input[name="trip"]:checked'
 ).value;
 
-const tripText =
-trip === "round"
-? "Gidiş - Dönüş"
-: "Tek Yön";
+const tripText=
+trip==="round"
+?"Gidiş - Dönüş"
+:"Tek Yön";
 
-
-const message =
+const message=
 
 `Merhaba Kıbrıs Nicosia Transfer,
 
@@ -995,78 +873,38 @@ ${total.toLocaleString("tr-TR")} TL
 
 Rezervasyonumu onaylamak istiyorum.`;
 
+const phone="905391046030";
 
-const phone =
-"905391046030";
+const whatsappURL=
+"https://wa.me/"+phone+
+"?text="+encodeURIComponent(message);
 
-
-const whatsappURL =
-"https://wa.me/" +
-phone +
-"?text=" +
-encodeURIComponent(message);
-
-
-window.location.href =
-whatsappURL;
-
+window.location.href=whatsappURL;
 }
 
-
-/* =====================================================
-   OTOMATİK GÜNCELLEME
-   ===================================================== */
-
-fromEl.addEventListener(
-"change",
-calculatePrice
-);
-
-toEl.addEventListener(
-"change",
-calculatePrice
-);
-
-dateEl.addEventListener(
-"change",
-calculatePrice
-);
-
-timeEl.addEventListener(
-"change",
-calculatePrice
-);
-
-passengersEl.addEventListener(
-"change",
-calculatePrice
-);
+fromEl.addEventListener("change",calculatePrice);
+toEl.addEventListener("change",calculatePrice);
+dateEl.addEventListener("change",calculatePrice);
+timeEl.addEventListener("change",calculatePrice);
+passengersEl.addEventListener("change",calculatePrice);
 
 guestNameEl.addEventListener(
 "input",
-function(){
-calculatePrice();
-}
+calculatePrice
 );
 
 guestSurnameEl.addEventListener(
 "input",
-function(){
-calculatePrice();
-}
+calculatePrice
 );
 
 guestPhoneEl.addEventListener(
 "input",
-function(){
-calculatePrice();
-}
+calculatePrice
 );
 
 document
-.querySelectorAll(
-'input[name="trip"]'
-)
+.querySelectorAll('input[name="trip"]')
 .forEach(function(radio){
 
 radio.addEventListener(
@@ -1075,7 +913,6 @@ calculatePrice
 );
 
 });
-
 
 calculatePrice();
 
